@@ -1,8 +1,22 @@
-plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.3.21'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.3.21'
+    ext.http4k_version = '3.103.0'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
 }
 
-version '1.0-SNAPSHOT'
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -10,11 +24,10 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-   
-    compile group: "org.http4k", name: "http4k-core", version: "3.130.0"
-    compile group: "org.http4k", name: "http4k-server-jetty", version: "3.130.0"
-    compile group: "org.http4k", name: "http4k-client-apache", version: "3.130.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    compile "org.http4k:http4k-core:$http4k_version"
+    compile "org.http4k:http4k-server-jetty:$http4k_version"
 
     testCompile group: 'junit', name: 'junit-dep', version: '4.10'
     testCompile 'com.natpryce:hamkrest:1.7.0.0'
@@ -27,4 +40,8 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-task stage(dependsOn: ['clean', 'build'])
+application {
+    mainClassName = 'app.AppKt'
+}
+
+task stage(dependsOn: ['installDist'])

@@ -7,8 +7,9 @@ import org.http4k.routing.routes
 import org.http4k.server.Jetty
 import org.http4k.server.asServer
 
-fun main() {
-    routes.asServer(Jetty(9000)).start()
+fun main(args: Array<String>) {
+    val port = if (args.isNotEmpty()) args[0].toInt() else 9000
+    routes.asServer(Jetty(port)).start()
 }
 
 val routes: HttpHandler = routes("/hello" bind GET to { request: org.http4k.core.Request ->

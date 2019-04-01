@@ -1,0 +1,1 @@
+web: build/install/playgenius/bin/playgenius $PORT
