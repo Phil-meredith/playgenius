@@ -1,4 +1,4 @@
-import app.routes
+import app.Routes.routes
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
 import org.http4k.core.Method
