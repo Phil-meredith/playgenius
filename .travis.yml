@@ -1,12 +1,16 @@
 language: java
 jdk:
-  - openjdk11
+- openjdk11
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 script:
-    - "./gradlew -i check"
+- "./gradlew -i check"
+deploy:
+  provider: heroku
+  api_key:
+    secure: fqnN0zT/dldP5OfeP/h/ZO7ki/oSRAp3jb7KkvXpc5gNXLHOX335kqyUP+6eXYxDdNTAPl6ytQ/Oi6YRg138DWrtI9Wb3Lm+r3QtqQm4p1GSfPn6em0O2Sm5afpTMzj/XwpUMi2mg1nnl4lC/SedaL3Ht+/sqyToLcc0UZloSFRL6QUZlkXAzgpNRSYMtewJjgg4SfajNTdZZV8eQMbwf6narmVaWBj7JVS1S4glHcGYi2bCLc7KXKtVRntUkvK9hqK7eiECFZGen2Jj5TJ8Us+qiG8Db1x/0ctM/jG1+LhXuJsnML3BEmOixY+rx3jfh3deOU2PcyZoz1fhhox3yhZzxdgQ1sbkUT/MLfvZhhMrl9q8g+4k8u0rZwW0W+Q+4LlaHA5r4NiJAb8RU2rENj2eMQxxZIrYBiso6m4L3ew0bnNE+B9jkFixUpWOGySOtZ2WWKK/ZQ+xh2fjswyxpmoih9copzEIESK3xFdjz5XhxH5i6nEFhx2NNHwYtbXO6qnD+B/fkIwiHnZANx7vmC9dRzQ+JCeSmUofw/eeEKtUYsVn6HQvCAcpY92e/fRQmznF583DcWtjZfq1HYO8UF6yyiWS2Hw7PoOeNN+3RF+zOLzroGky/Zkm+E3O24wlVbgdufvZxkKWiGru0DNXy83L+GwOvaFg4H0YDPrk/bY=
