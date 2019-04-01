@@ -10,10 +10,14 @@ import org.http4k.core.Status.Companion.OK
 
 fun main(args: Array<String>) {
     val port = if (args.isNotEmpty()) args[0].toInt() else 9000
-    routes.asServer(Jetty(port)).start()
+    Routes.routes.asServer(Jetty(port)).start()
 }
 
-val routes: HttpHandler = routes(
-    "/hello" bind GET to { req -> Response(OK).body("Hello, ${req.query("name")}!")},
-    "/" bind GET to {Response(OK).body("Play Smarter, Play harder, Play Genius")}
-)
+
+object Routes {
+    val routes: HttpHandler = routes(
+        "/hello" bind GET to { req -> Response(OK).body("Hello, ${req.query("name")}!") },
+        "/" bind GET to { Response(OK).header("content-type","text/html")
+            .body(String(this.javaClass.getResourceAsStream("/public/html/index.html").readBytes())) }
+    )
+}
