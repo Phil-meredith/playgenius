@@ -5,6 +5,8 @@ import org.http4k.routing.bind
 import org.http4k.routing.routes
 import org.http4k.server.Jetty
 import org.http4k.server.asServer
+import org.http4k.core.Method.GET
+import org.http4k.core.Status.Companion.OK
 
 fun main(args: Array<String>) {
     val port = if (args.isNotEmpty()) args[0].toInt() else 9000
@@ -12,8 +14,6 @@ fun main(args: Array<String>) {
 }
 
 val routes: HttpHandler = routes(
-    "/hello" bind Method.GET to { request ->
-    Response(Status.OK)
-        .body("Hello, ${request.query("name")}!")},
-    "/" bind Method.GET to {Response(Status.OK).body("Play Smarter, Play harder, Play Genius")}
+    "/hello" bind GET to { req -> Response(OK).body("Hello, ${req.query("name")}!")},
+    "/" bind GET to {Response(OK).body("Play Smarter, Play harder, Play Genius")}
 )
