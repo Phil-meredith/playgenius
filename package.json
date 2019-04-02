@@ -17,8 +17,8 @@
     "url": "https://github.com/play-genius/playgenius/issues"
   },
   "homepage": "https://github.com/play-genius/playgenius#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "node-sass": "^4.11.0"
-  },
-  "dependencies": {}
+  }
 }
