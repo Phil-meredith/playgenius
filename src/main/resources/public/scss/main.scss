@@ -1,3 +1,42 @@
 body {
-  color: green;
+  margin: 0 0 0 0
+}
+
+
+header{
+  height: 5rem;
+}
+.container {
+  padding-top: 1.5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+
+  display: flex;
+
+  &__nav {
+    display: flex;
+    margin-left: 50%;
+
+    &__list {
+      margin: 0 0 0 0;
+      display: flex;
+      list-style-type: none;
+
+      li {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.hero {
+  &__image {
+    margin: 0 0 0 0;
+    width: 100%;
+  }
+}
+
+.purpose{
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
