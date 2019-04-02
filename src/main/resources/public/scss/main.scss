@@ -29,7 +29,7 @@ header {
   background-color: $color-body;
   color: $font-color-body;
 
-  @media (max-width: 768px) {
+  @media handheld,screen and (max-width: 768px) {
     height: 7rem;
   }
 
@@ -84,7 +84,7 @@ header {
     background: url('/image/goal-keeper.jpg') no-repeat center top;
     background-size: cover;
 
-    @media (max-width: 768px) {
+    @media handheld,screen and (max-width: 768px) {
       height: 74rem;
       background: url('/image/football-mobile.jpg') no-repeat center top;
     }
