@@ -44,4 +44,10 @@ application {
     mainClassName = 'app.AppKt'
 }
 
-task stage(dependsOn: ['installDist'])
+task frontEnd(type:Exec){
+    executable = "npm"
+    args = ["run", "sass"]
+}
+
+task stage(dependsOn: ['frontEnd','installDist'])
+

@@ -1,0 +1,24 @@
+{
+  "name": "playgenius",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/play-genius/playgenius.svg?branch=master)](https://travis-ci.org/play-genius/playgenius)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass" : "node-sass src/main/resources/public/scss  -o src/main/resources/public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/play-genius/playgenius.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/play-genius/playgenius/issues"
+  },
+  "homepage": "https://github.com/play-genius/playgenius#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {}
+}
