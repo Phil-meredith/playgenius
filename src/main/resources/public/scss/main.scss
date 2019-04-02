@@ -2,6 +2,13 @@ $font-eye-catch: 'Lobster', cursive;
 $font-color-body: #153131;
 $color-body: #f0eceb;
 $link-hover-color: #45CB85;
+
+body{
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
 body {
   margin: 0 0 0 0;
   font-family: 'Montserrat', sans-serif;
@@ -77,6 +84,7 @@ header {
   background-color: $color-body;
   padding: 2rem 5rem 5rem;
   color: $font-color-body;
+  height:100%;
 
   &__container {
     width: 67%;
