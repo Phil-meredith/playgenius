@@ -23,6 +23,28 @@ class StatsGeneratorTest {
         }
 
         val stats = StatsGenerator(stubReadingsClient)
-        assertThat(stats.averagePosition("not-used"), equalTo(mapOf(0 to Triple(10.0, 1.0, 0.0))))
+        assertThat(stats.averagePosition("not-used"), equalTo(mapOf(0 to mapOf( "blah" to Triple(10.0, 1.0, 0.0)))))
+    }
+
+    @Test
+    fun `can generate average position for multiple anchor`() {
+
+        val stubReadingsClient = object : ReadingsClient {
+            override fun getReadings(fileName: String): Sequence<Reading> {
+                return listOf(
+                    reading,
+                    reading.copy(position = Triple(5.0, 0.5, -1.0)),
+                    reading.copy(anchor = "two"),
+                    reading.copy(anchor= "two",position = Triple(6.0, 1.0, 0.0))
+                ).asSequence()
+            }
+        }
+
+        val stats = StatsGenerator(stubReadingsClient)
+        assertThat(stats.averagePosition("not-used"), equalTo(
+            mapOf(0 to mapOf(
+                "blah" to Triple(10.0, 1.0, 0.0),
+                "two" to Triple(10.5, 1.25, 0.5)
+            ))))
     }
 }
