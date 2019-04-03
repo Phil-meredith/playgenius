@@ -1,10 +1,9 @@
+import clients.Reading
+import clients.ReadingsClient
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
-import com.opencsv.CSVReader
 import org.junit.Test
-import java.io.InputStreamReader
 import java.time.Instant
-import java.lang.Long.parseLong
 
 class ReadingsParserTest {
 
@@ -12,7 +11,7 @@ class ReadingsParserTest {
     fun `can parse readings`() {
         val readingsClient = ReadingsClient()
 
-        val readings = readingsClient.getReadings("testReadings.csv")
+        val readings = readingsClient.getReadings(javaClass.getResourceAsStream("testReadings.csv"))
         assertThat(readings.size, equalTo(304))
 
         assertThat(
@@ -30,32 +29,3 @@ class ReadingsParserTest {
         )
     }
 }
-
-class ReadingsClient {
-
-    fun getReadings(path: String): List<Reading> =
-        CSVReader(InputStreamReader(javaClass.getResourceAsStream(path)))
-            .asSequence()
-            .map {
-                Reading(
-                    it[0].toInstant(),
-                    it[2].toInt(),
-                    it[3],
-                    Triple(it[4].toDouble(), it[5].toDouble(), it[6].toDouble()),
-                    it[7].toInt(),
-                    parseLong(it[8].removePrefix("x"), 16)
-                )
-            }.toList()
-
-    private fun String.toInstant() = split(".")
-        .let { Instant.ofEpochSecond(it[0].toLong(), it[1].toLong()) }
-}
-
-data class Reading(
-    val date: Instant,
-    val user: Int,
-    val anchor: String,
-    val position: Triple<Double, Double, Double>,
-    val confidence: Int,
-    val counter: Long
-)
