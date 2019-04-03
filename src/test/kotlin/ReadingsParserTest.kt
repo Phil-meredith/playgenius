@@ -1,5 +1,5 @@
 import clients.Reading
-import clients.ReadingsClient
+import clients.FileReadingsClient
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
 import org.junit.Test
@@ -9,9 +9,9 @@ class ReadingsParserTest {
 
     @Test
     fun `can parse readings`() {
-        val readingsClient = ReadingsClient()
+        val readingsClient = FileReadingsClient { name -> javaClass.getResourceAsStream(name)}
 
-        val readings = readingsClient.getReadings(javaClass.getResourceAsStream("testReadings.csv"))
+        val readings = readingsClient.getReadings("testReadings.csv").toList()
         assertThat(readings.size, equalTo(304))
 
         assertThat(
