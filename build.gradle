@@ -28,6 +28,7 @@ dependencies {
 
     compile "org.http4k:http4k-core:$http4k_version"
     compile "org.http4k:http4k-server-jetty:$http4k_version"
+    compile group: 'com.opencsv', name: 'opencsv', version: '4.5'
 
     testCompile group: 'junit', name: 'junit-dep', version: '4.10'
     testCompile 'com.natpryce:hamkrest:1.7.0.0'
@@ -38,6 +39,9 @@ compileKotlin {
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions {
+        freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
+    }
 }
 
 application {
