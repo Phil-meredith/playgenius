@@ -1,6 +1,7 @@
 package app
 
 import org.http4k.core.*
+import org.http4k.core.Method.GET
 import org.http4k.routing.bind
 import org.http4k.routing.path
 import org.http4k.routing.routes
@@ -10,20 +11,20 @@ import org.http4k.format.Jackson.asPrettyJsonString
 
 class Routes(private val statsGenerator: StatsGenerator) {
     val routes: HttpHandler = routes(
-        "/averagePosition/{match}" bind Method.GET to { req ->
+        "/averagePosition/{match}" bind GET to { req ->
             req.path("match")
                 .toResponse { name -> statsGenerator.averagePosition(name).asJsonObject().asPrettyJsonString() }
         },
-        "/hello" bind Method.GET to { req ->
+        "/hello" bind GET to { req ->
             Response(Status.OK).body("Hello, ${req.query("name")}!")
         },
-        "/{assetType}/{fileName}" bind Method.GET to { req ->
+        "/{assetType}/{fileName}" bind GET to { req ->
             assetResponse(
                 req.path("assetType"),
                 req.path("fileName")
             )
         },
-        "/" bind Method.GET to { assetResponse("html", "index.html") }
+        "/" bind GET to { assetResponse("html", "index.html") }
     )
 
     private fun assetResponse(assetType: String?, fileName: String?) =
