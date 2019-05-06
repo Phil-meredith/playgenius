@@ -30,8 +30,8 @@ class FileReadingsClient(private val resourceLoader : (String) -> InputStream) :
 
 data class Reading(
     val date: Instant,
-    val user: Int,
-    val anchor: String,
+    val anchor: Int,
+    val userTag: String,
     val position: Triple<Double, Double, Double>,
     val confidence: Int,
     val counter: Long

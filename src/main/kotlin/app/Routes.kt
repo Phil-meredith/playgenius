@@ -15,6 +15,10 @@ class Routes(private val statsGenerator: StatsGenerator) {
             req.path("match")
                 .toResponse { name -> statsGenerator.averagePosition(name).asJsonObject().asPrettyJsonString() }
         },
+        "/totalDistance/{match}" bind GET to { req ->
+            req.path("match")
+                .toResponse { name -> statsGenerator.totalDistance(name).asJsonObject().asPrettyJsonString() }
+        },
         "/hello" bind GET to { req ->
             Response(Status.OK).body("Hello, ${req.query("name")}!")
         },

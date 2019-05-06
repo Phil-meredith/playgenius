@@ -29,9 +29,17 @@ class RoutesTest {
     fun averagePositionTest(){
         val response = Routes(StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")})).routes.invoke(Request(Method.GET, "/averagePosition/testReadings"))
         assertThat(response.bodyString().asJsonObject(), equalTo("""{
-            "0" : { "9A26": {
-        "first" : 1.2593092105263148,
-        "second" : 0.8262828947368425,
-        "third" : 0.648848684210526} }}""".asJsonObject()))
+        |"0" : { "9A26": {
+        |"first" : 1.2593092105263148,
+        |"second" : 0.8262828947368425,
+        |"third" : 0.648848684210526} }}""".trimMargin().asJsonObject()))
+    }
+
+    @Test
+    fun totalDistanceTest(){
+        val response = Routes(StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")})).routes.invoke(Request(Method.GET, "/totalDistance/testReadings"))
+        assertThat(response.bodyString().asJsonObject(), equalTo("""{
+            |"9A26":65.63461690915123
+            |}""".trimMargin().asJsonObject()))
     }
 }
