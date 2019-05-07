@@ -50,11 +50,11 @@ class StatsGeneratorTest {
 
     @Test
     fun `difference between two points`(){
-        assertThat(distanceBetweenTwoPoints(Triple(-1.0,1.0,0.0),Triple(3.0,4.0,0.0)), equalTo(5.0))
+        assertThat(distanceBetween(Triple(-1.0,1.0,0.0),Triple(3.0,4.0,0.0)), equalTo(5.0))
     }
  @Test
     fun `Zero difference between the same points`(){
-        assertThat(distanceBetweenTwoPoints(Triple(-1.0,1.0,0.0),Triple(-1.0,1.0,0.0)), equalTo(0.0))
+        assertThat(distanceBetween(Triple(-1.0,1.0,0.0),Triple(-1.0,1.0,0.0)), equalTo(0.0))
     }
 
     @Test

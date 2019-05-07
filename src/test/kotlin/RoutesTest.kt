@@ -39,7 +39,7 @@ class RoutesTest {
     fun totalDistanceTest(){
         val response = Routes(StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")})).routes.invoke(Request(Method.GET, "/totalDistance/testReadings"))
         assertThat(response.bodyString().asJsonObject(), equalTo("""{
-            |"9A26":65.63461690915123
+            |"9A26":65.63461690915113
             |}""".trimMargin().asJsonObject()))
     }
 }
