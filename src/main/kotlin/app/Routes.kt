@@ -1,5 +1,6 @@
 package app
 
+import htmlTemplates.MatchesTemplate
 import org.http4k.core.*
 import org.http4k.core.Method.GET
 import org.http4k.routing.bind
@@ -8,8 +9,12 @@ import org.http4k.routing.routes
 import java.nio.ByteBuffer
 import org.http4k.format.Jackson.asJsonObject
 import org.http4k.format.Jackson.asPrettyJsonString
+import org.http4k.template.HandlebarsTemplates
+import org.http4k.template.TemplateRenderer
+import org.http4k.template.ViewModel
+import org.http4k.template.viewModel
 
-class Routes(private val statsGenerator: StatsGenerator) {
+class Routes(private val statsGenerator: StatsGenerator, renderer: TemplateRenderer) {
     val routes: HttpHandler = routes(
         "/averagePosition/{match}" bind GET to { req ->
             req.path("match")
@@ -28,7 +33,9 @@ class Routes(private val statsGenerator: StatsGenerator) {
                 req.path("fileName")
             )
         },
-        "/" bind GET to { assetResponse("html", "index.html") }
+        "/" bind GET to { assetResponse("html", "index.html") },
+        "/matches" bind GET to {Response(Status.OK).body(renderer(Matches(listOf("1234"))))},
+        "/matches2" bind GET to {Response(Status.OK).header("content-type","text/html").body(MatchesTemplate(Matches(listOf("1234"))).html)}
     )
 
     private fun assetResponse(assetType: String?, fileName: String?) =
@@ -55,3 +62,5 @@ class Routes(private val statsGenerator: StatsGenerator) {
         )
         else body(String(this.javaClass.getResourceAsStream("/public/$assetType/$fileName").readBytes()))
 }
+
+data class Matches(val value: List<String>): ViewModel
