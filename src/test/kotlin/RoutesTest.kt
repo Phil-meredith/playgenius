@@ -1,6 +1,7 @@
 import app.Routes
 import app.StatsGenerator
 import clients.FileReadingsClient
+import clients.MatchClient
 import clients.Reading
 import clients.ReadingsClient
 import com.natpryce.hamkrest.assertion.assertThat
@@ -23,7 +24,7 @@ class RoutesTest {
     @Test
     fun averagePositionTest(){
         val response = Routes(
-            StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")})).routes.invoke(Request(Method.GET, "/averagePosition/testReadings"))
+            StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")}), MatchClient()).routes.invoke(Request(Method.GET, "/averagePosition/testReadings"))
         assertThat(response.bodyString().asJsonObject(), equalTo("""{
         |"0" : { "9A26": {
         |"first" : 1.2593092105263148,
@@ -33,7 +34,7 @@ class RoutesTest {
 
     @Test
     fun totalDistanceTest(){
-        val response = Routes(StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")})).routes.invoke(Request(Method.GET, "/totalDistance/testReadings"))
+        val response = Routes(StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")}), MatchClient()).routes.invoke(Request(Method.GET, "/totalDistance/testReadings"))
         assertThat(response.bodyString().asJsonObject(), equalTo("""{
             |"9A26":65.63461690915113
             |}""".trimMargin().asJsonObject()))
