@@ -5,7 +5,7 @@ import kotlinx.html.*
 import kotlinx.html.stream.createHTML
 
 
-class MatchesTemplate(val matches: Matches) {
+class MatchesTemplate(private val matches: Matches) {
 
     val html = createHTML().html {
         head {
@@ -20,7 +20,7 @@ class MatchesTemplate(val matches: Matches) {
                 ul {
                     matches.value.forEach {
                         li {
-                            +it
+                            a(href="/averagePosition/$it"){+it}
                         }
                     }
                 }

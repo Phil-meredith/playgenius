@@ -1,48 +1,49 @@
 package app
 
+import clients.MatchClient
 import htmlTemplates.MatchesTemplate
+import org.http4k.contract.bindContract
+import org.http4k.contract.contract
+import org.http4k.contract.div
 import org.http4k.core.*
 import org.http4k.core.Method.GET
-import org.http4k.routing.bind
-import org.http4k.routing.path
-import org.http4k.routing.routes
 import java.nio.ByteBuffer
 import org.http4k.format.Jackson.asJsonObject
 import org.http4k.format.Jackson.asPrettyJsonString
-import org.http4k.template.HandlebarsTemplates
-import org.http4k.template.TemplateRenderer
+import org.http4k.lens.Path
+import org.http4k.lens.string
 import org.http4k.template.ViewModel
-import org.http4k.template.viewModel
 
-class Routes(private val statsGenerator: StatsGenerator, renderer: TemplateRenderer) {
-    val routes: HttpHandler = routes(
-        "/averagePosition/{match}" bind GET to { req ->
-            req.path("match")
-                .toResponse { name -> statsGenerator.averagePosition(name).asJsonObject().asPrettyJsonString() }
-        },
-        "/totalDistance/{match}" bind GET to { req ->
-            req.path("match")
-                .toResponse { name -> statsGenerator.totalDistance(name).asJsonObject().asPrettyJsonString() }
-        },
-        "/hello" bind GET to { req ->
-            Response(Status.OK).body("Hello, ${req.query("name")}!")
-        },
-        "/{assetType}/{fileName}" bind GET to { req ->
-            assetResponse(
-                req.path("assetType"),
-                req.path("fileName")
-            )
-        },
-        "/" bind GET to { assetResponse("html", "index.html") },
-        "/matches" bind GET to {Response(Status.OK).body(renderer(Matches(listOf("1234"))))},
-        "/matches2" bind GET to {Response(Status.OK).header("content-type","text/html").body(MatchesTemplate(Matches(listOf("1234"))).html)}
-    )
+class Routes(private val statsGenerator: StatsGenerator, private val matchClient: MatchClient) {
 
-    private fun assetResponse(assetType: String?, fileName: String?) =
-        Response(Status.OK).header("content-type", if (assetType == "image") "image/jpeg" else "text/$assetType").withBody(
-            assetType,
-            fileName
-        )
+    val routes = contract {
+        routes.plusAssign(listOf(
+            "/" bindContract GET to assetResponse("html", "index.html"),
+            "/matches" bindContract GET to MatchesTemplate(matchClient.getMatches()).html.toOk(),
+            "/averagePosition" / Path.string().of("match") bindContract GET to { match ->
+                statsGenerator.averagePosition(match).asJsonObject().asPrettyJsonString().toOk()
+            },
+            "/totalDistance" / Path.string().of("match") bindContract GET to { match ->
+                statsGenerator.totalDistance(match).asJsonObject().asPrettyJsonString().toOk()
+            },
+            Path.string().of("assetType") / Path.string().of("fileName") bindContract GET to { assetType, fileName ->
+                assetResponse(assetType, fileName)
+            }
+        ))
+    }
+
+
+    private fun String.toOk(): (Request) -> Response =
+        { Response(Status.OK).body(this) }
+
+    private fun assetResponse(assetType: String, fileName: String): (Request) -> Response =
+        {
+            Response(Status.OK).header("content-type", if (assetType == "image") "image/jpeg" else "text/$assetType")
+                .withBody(
+                    assetType,
+                    fileName
+                )
+        }
 
     private fun String?.toResponse(execute: (String) -> String) = this?.let {
         Response(Status.OK).body(
@@ -63,4 +64,4 @@ class Routes(private val statsGenerator: StatsGenerator, renderer: TemplateRende
         else body(String(this.javaClass.getResourceAsStream("/public/$assetType/$fileName").readBytes()))
 }
 
-data class Matches(val value: List<String>): ViewModel
+data class Matches(val value: List<String>) : ViewModel

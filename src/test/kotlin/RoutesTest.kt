@@ -9,6 +9,7 @@ import org.http4k.core.Method
 import org.junit.Test
 import org.http4k.core.Request
 import org.http4k.format.Jackson.asJsonObject
+import org.http4k.template.TemplateRenderer
 
 
 val noOpReadings = object:ReadingsClient{
@@ -20,14 +21,9 @@ val noOpReadings = object:ReadingsClient{
 class RoutesTest {
 
     @Test
-    fun helloTest(){
-        val response = Routes(StatsGenerator((noOpReadings))).routes.invoke(Request(Method.GET, "/hello?name=bob"))
-        assertThat(response.bodyString(), equalTo("Hello, bob!"))
-    }
-
-    @Test
     fun averagePositionTest(){
-        val response = Routes(StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")})).routes.invoke(Request(Method.GET, "/averagePosition/testReadings"))
+        val response = Routes(
+            StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")})).routes.invoke(Request(Method.GET, "/averagePosition/testReadings"))
         assertThat(response.bodyString().asJsonObject(), equalTo("""{
         |"0" : { "9A26": {
         |"first" : 1.2593092105263148,
