@@ -1,24 +1,32 @@
 package app
 
 import clients.MatchClient
+import htmlTemplates.MatchTemplate
 import htmlTemplates.MatchesTemplate
 import org.http4k.contract.bindContract
 import org.http4k.contract.contract
 import org.http4k.contract.div
 import org.http4k.core.*
+import org.http4k.core.ContentType.Companion.TEXT_PLAIN
 import org.http4k.core.Method.GET
 import java.nio.ByteBuffer
 import org.http4k.format.Jackson.asJsonObject
 import org.http4k.format.Jackson.asPrettyJsonString
 import org.http4k.lens.Path
+import org.http4k.lens.StringBiDiMappings
+import org.http4k.lens.map
 import org.http4k.lens.string
 import org.http4k.template.ViewModel
 
 class Routes(private val statsGenerator: StatsGenerator, private val matchClient: MatchClient) {
 
+    fun Path.match() = map { match -> Match(match)}
+
+
     val routes = contract {
         routes.plusAssign(listOf(
             "/" bindContract GET to assetResponse("html", "index.html"),
+            "/match"/ Path.match().of("match") bindContract GET to {match -> MatchTemplate(match).html.toOk()},
             "/matches" bindContract GET to MatchesTemplate(matchClient.getMatches()).html.toOk(),
             "/averagePosition" / Path.string().of("match") bindContract GET to { match ->
                 statsGenerator.averagePosition(match).asJsonObject().asPrettyJsonString().toOk()
@@ -64,4 +72,5 @@ class Routes(private val statsGenerator: StatsGenerator, private val matchClient
         else body(String(this.javaClass.getResourceAsStream("/public/$assetType/$fileName").readBytes()))
 }
 
-data class Matches(val value: List<String>) : ViewModel
+data class Matches(val value: List<Match>)
+data class Match(val value: String)
