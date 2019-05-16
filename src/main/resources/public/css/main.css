@@ -1,0 +1,81 @@
+body {
+  display: flex;
+  flex-flow: column;
+  height: 100%; }
+
+body {
+  margin: 0 0 0 0;
+  font-family: 'Montserrat', sans-serif; }
+  body a {
+    text-decoration: none;
+    color: inherit; }
+
+h1, h3 {
+  margin: 0 0 0 0;
+  font-family: "Lobster", cursive; }
+
+header {
+  height: 5rem;
+  background-color: #f0eceb;
+  color: #153131; }
+  @media handheld, screen and (max-width: 768px) {
+    header {
+      height: 7rem; } }
+  header a:hover {
+    color: #45CB85;
+    text-decoration: none;
+    cursor: pointer; }
+
+.container {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  display: flex; }
+  .container--noPad {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0; }
+  .container__nav {
+    display: flex;
+    margin-left: 50%; }
+    .container__nav__list {
+      margin: 0 0 0 0;
+      display: flex;
+      list-style-type: none; }
+      .container__nav__list li {
+        margin-left: 1rem; }
+    @media screen and (max-width: 1204px) {
+      .container__nav--optional {
+        display: none; } }
+
+.hero__image {
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 35rem;
+  background: url("/image/goal-keeper.jpg") no-repeat center top;
+  background-size: cover; }
+  @media handheld, screen and (max-width: 768px) {
+    .hero__image {
+      height: 74rem;
+      background: url("/image/football-mobile.jpg") no-repeat center top; } }
+
+.purpose {
+  background-color: #f0eceb;
+  padding: 2rem 5rem 5rem;
+  color: #153131;
+  height: 100%; }
+  @media (min-width: 768px) {
+    .purpose__container {
+      width: 67%; } }
+  .purpose--big-title {
+    font-size: 3rem; }
+  .purpose--no-bottom {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  .purpose__link {
+    font-family: "Lobster", cursive;
+    font-size: 1.5rem; }
+  .purpose__link:hover {
+    color: #45CB85;
+    text-decoration: none;
+    cursor: pointer; }
