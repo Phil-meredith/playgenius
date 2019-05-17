@@ -1,7 +1,8 @@
 window.onload = function() {
 
+ const matchId = document.head.querySelector("[name=matchId][content]").content;
 
-fetch("/totalDistance/150319")
+fetch("/totalDistance/"+matchId)
     .then(function(response){
     if (response.status !== 200) {
             console.log('Looks like there was a problem. Status Code: ' +
