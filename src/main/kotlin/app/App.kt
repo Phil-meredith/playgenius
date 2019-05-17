@@ -6,6 +6,7 @@ import org.http4k.core.*
 import org.http4k.server.Jetty
 import org.http4k.server.asServer
 import org.http4k.filter.ResponseFilters
+import java.lang.IllegalStateException
 import java.time.Clock
 
 fun main(args: Array<String>) {
@@ -18,7 +19,7 @@ fun main(args: Array<String>) {
 
     val readingsClient =
         FileReadingsClient( { name -> Routes::class.java.getResourceAsStream("/public/readings/$name/readings.csv") },
-            { name -> Routes::class.java.getResourceAsStream("/public/readings/$name/team.csv") })
+            { name -> try{Routes::class.java.getResourceAsStream("/public/readings/$name/team.csv") } catch (e: IllegalStateException){null}})
     val statsController = StatsGenerator(readingsClient)
 
     audit.then(Routes(statsController, MatchClient()).routes).asServer(Jetty(port)).start()

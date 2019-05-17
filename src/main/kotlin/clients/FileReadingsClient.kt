@@ -11,7 +11,7 @@ interface ReadingsClient {
 
 class FileReadingsClient(
     private val readingsLoader: (String) -> InputStream,
-    private val teamLoader: (String) -> InputStream
+    private val teamLoader: (String) -> InputStream?
 ) : ReadingsClient {
     override fun getReadings(matchToLoad: String): Sequence<Reading> =
         CSVReader(InputStreamReader(readingsLoader(matchToLoad)))
@@ -31,8 +31,8 @@ class FileReadingsClient(
         getPlayerNames(matchToLoad).combineReadingAndTeam(it)
     }
 
-    private fun getPlayerNames(matchToLoad: String) =
-        CSVReader(InputStreamReader(teamLoader(matchToLoad))).asSequence().map { Pair(it[0].toInt()-1, it[1]) }.toMap()
+    private fun getPlayerNames(matchToLoad: String): Map<Int, String> = teamLoader(matchToLoad)?.let {
+     CSVReader(InputStreamReader(it)).asSequence().map { Pair(it[0].toInt()-1, it[1]) }.toMap()}.orEmpty()
 
     private fun Map<Int, String>.combineReadingAndTeam(rawReading: RawReading): Reading =
         Reading(
