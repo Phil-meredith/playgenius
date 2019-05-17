@@ -22,9 +22,9 @@ class MatchTemplate(private val matches: Match) {
                div{
                    id = "charts"
                    canvas {
-                       id="averagePosition"
-                       width="400"
-                       height="400"
+                       id="totalDistance"
+                       width="200"
+                       height="200"
                    }
                }
             }

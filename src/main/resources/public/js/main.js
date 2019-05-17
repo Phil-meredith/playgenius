@@ -1,13 +1,34 @@
 window.onload = function() {
-var ctx = document.getElementById('averagePosition');
 
+
+fetch("/totalDistance/150319")
+    .then(function(response){
+    if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' +
+              response.status);
+            return;
+          }
+     response.json().then(function(data) {
+            console.log(data);
+            makeChart(Object.keys(data), Object.values(data))
+
+          });
+    })
+    .catch(function(err) {
+        console.log('Fetch Error :-S', err);
+      });
+};
+
+
+function makeChart(labelList, dataList){
+var ctx = document.getElementById('totalDistance');
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: labelList,
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'Total Distance',
+            data: dataList,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -29,6 +50,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
+            xAxes: [{position: 'top'}],
             yAxes: [{
                 ticks: {
                     beginAtZero: true
@@ -36,5 +58,4 @@ var myChart = new Chart(ctx, {
             }]
         }
     }
-});
-}
+});}

@@ -4,7 +4,7 @@ import clients.ReadingsClient
 import java.lang.Math.pow
 
 class StatsGenerator(private val readingsClient: ReadingsClient) {
-    fun averagePosition(match: String): Map<Int, Map<String, Triple<Double, Double, Double>>> =
+    fun averagePosition(match: String): Map<String, Map<String, Triple<Double, Double, Double>>> =
         readingsClient.getReadings(match)
             .groupBy { it.anchor }
             .mapValues { (_, v) ->
