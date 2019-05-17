@@ -9,7 +9,7 @@ class ReadingsParserTest {
 
     @Test
     fun `can parse readings`() {
-        val readingsClient = FileReadingsClient { name -> javaClass.getResourceAsStream(name)}
+        val readingsClient = FileReadingsClient( { name -> javaClass.getResourceAsStream(name)},{null})
 
         val readings = readingsClient.getReadings("testReadings.csv").toList()
         assertThat(readings.size, equalTo(304))
@@ -19,7 +19,7 @@ class ReadingsParserTest {
             equalTo(
                 Reading(
                     Instant.parse("2019-03-03T23:16:31.000999228Z"),
-                    0,
+                    "0",
                     "9A26",
                     Triple(1.32, 1.38, 0.32),
                     0,

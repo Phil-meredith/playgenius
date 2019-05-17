@@ -20,13 +20,14 @@ val noOpReadings = object:ReadingsClient{
 }
 
 class RoutesTest {
+    private val readingsClient = FileReadingsClient({ name -> this.javaClass.getResourceAsStream("$name.csv") }, { null })
 
     @Test
     fun averagePositionTest(){
         val response = Routes(
-            StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")}), MatchClient()).routes.invoke(Request(Method.GET, "/averagePosition/testReadings"))
+            StatsGenerator(readingsClient), MatchClient()).routes.invoke(Request(Method.GET, "/averagePosition/testReadings"))
         assertThat(response.bodyString().asJsonObject(), equalTo("""{
-        |"0" : { "9A26": {
+        |"9A26" : { "0": {
         |"first" : 1.2593092105263148,
         |"second" : 0.8262828947368425,
         |"third" : 0.648848684210526} }}""".trimMargin().asJsonObject()))
@@ -34,9 +35,9 @@ class RoutesTest {
 
     @Test
     fun totalDistanceTest(){
-        val response = Routes(StatsGenerator(FileReadingsClient { name -> this.javaClass.getResourceAsStream("$name.csv")}), MatchClient()).routes.invoke(Request(Method.GET, "/totalDistance/testReadings"))
+        val response = Routes(StatsGenerator(readingsClient), MatchClient()).routes.invoke(Request(Method.GET, "/totalDistance/testReadings"))
         assertThat(response.bodyString().asJsonObject(), equalTo("""{
-            |"9A26":65.63461690915113
+            |"0":65.63461690915113
             |}""".trimMargin().asJsonObject()))
     }
 }
