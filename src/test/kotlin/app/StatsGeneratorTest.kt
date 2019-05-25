@@ -7,14 +7,18 @@ import com.natpryce.hamkrest.equalTo
 import org.junit.Test
 import java.time.Instant
 
+
 class StatsGeneratorTest {
-    val reading = Reading(Instant.now(), "0", "blah", Triple(15.0, 1.5, 1.0), 0, 0)
+    val startDate = Instant.now()
+
+    val reading = Reading(startDate, "0", "blah", Triple(15.0, 1.5, 1.0), 0, 0)
+
 
     @Test
     fun `can generate average position for one anchor`() {
 
         val stubReadingsClient = object : ReadingsClient {
-            override fun getReadings(fileName: String): Sequence<Reading> {
+            override fun getReadings(matchToLoad: String): Sequence<Reading> {
                 return listOf(
                     reading,
                     reading.copy(position = Triple(5.0, 0.5, -1.0))
@@ -30,7 +34,7 @@ class StatsGeneratorTest {
     fun `can generate average position for multiple anchor`() {
 
         val stubReadingsClient = object : ReadingsClient {
-            override fun getReadings(fileName: String): Sequence<Reading> {
+            override fun getReadings(matchToLoad: String): Sequence<Reading> {
                 return listOf(
                     reading,
                     reading.copy(position = Triple(5.0, 0.5, -1.0)),
@@ -66,16 +70,16 @@ class StatsGeneratorTest {
     @Test
     fun `can get total difference`() {
         val stubReadingsClient = object : ReadingsClient {
-            override fun getReadings(fileName: String): Sequence<Reading> {
+            override fun getReadings(matchToLoad: String): Sequence<Reading> {
                 return listOf(
-                    Reading(Instant.now(), "one", "0", Triple(-1.0, 1.0, 1.0), 0, 0),
-                    Reading(Instant.now(), "one", "0", Triple(3.0, 4.0, 1.0), 0, 1),
-                    Reading(Instant.now(), "two", "0", Triple(3.0, 4.0, 1.0), 0, 0),
-                    Reading(Instant.now(), "two", "0", Triple(-1.0, 1.0, 1.0), 0, 1),
-                    Reading(Instant.now(), "three", "0", Triple(-1.0, 1.0, 1.0), 0, 0),
-                    Reading(Instant.now(), "three", "0", Triple(3.0, 4.0, 1.0), 0, 1),
-                    Reading(Instant.now(), "three", "0", Triple(3.0, 4.0, 1.0), 0, 2),
-                    Reading(Instant.now(), "three", "0", Triple(-1.0, 1.0, 1.0), 0, 3)
+                    Reading(startDate, "one", "0", Triple(-1.0, 1.0, 1.0), 0, 0),
+                    Reading(startDate, "one", "0", Triple(3.0, 4.0, 1.0), 0, 1),
+                    Reading(startDate, "two", "0", Triple(3.0, 4.0, 1.0), 0, 0),
+                    Reading(startDate, "two", "0", Triple(-1.0, 1.0, 1.0), 0, 1),
+                    Reading(startDate, "three", "0", Triple(-1.0, 1.0, 1.0), 0, 0),
+                    Reading(startDate, "three", "0", Triple(3.0, 4.0, 1.0), 0, 1),
+                    Reading(startDate, "three", "0", Triple(3.0, 4.0, 1.0), 0, 2),
+                    Reading(startDate, "three", "0", Triple(-1.0, 1.0, 1.0), 0, 3)
                 ).asSequence()
             }
         }

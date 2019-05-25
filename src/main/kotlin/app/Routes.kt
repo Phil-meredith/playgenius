@@ -20,8 +20,7 @@ import org.http4k.template.ViewModel
 
 class Routes(private val statsGenerator: StatsGenerator, private val matchClient: MatchClient) {
 
-    fun Path.match() = map { match -> Match(match)}
-
+    private fun Path.match() = map { match -> Match(match)}
 
     val routes = contract {
         routes.plusAssign(listOf(
@@ -40,7 +39,6 @@ class Routes(private val statsGenerator: StatsGenerator, private val matchClient
         ))
     }
 
-
     private fun String.toOk(): (Request) -> Response =
         { Response(Status.OK).body(this) }
 
@@ -52,12 +50,6 @@ class Routes(private val statsGenerator: StatsGenerator, private val matchClient
                     fileName
                 )
         }
-
-    private fun String?.toResponse(execute: (String) -> String) = this?.let {
-        Response(Status.OK).body(
-            execute(it)
-        )
-    } ?: Response(Status.NOT_FOUND)
 
     private fun Response.withBody(assetType: String?, fileName: String?): Response =
         if (assetType == "image") body(

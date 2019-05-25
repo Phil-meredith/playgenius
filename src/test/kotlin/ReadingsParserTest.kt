@@ -19,8 +19,8 @@ class ReadingsParserTest {
             equalTo(
                 Reading(
                     Instant.parse("2019-03-03T23:16:31.000999228Z"),
-                    "0",
                     "9A26",
+                    "0",
                     Triple(1.32, 1.38, 0.32),
                     0,
                     153

@@ -19,30 +19,35 @@ class FileReadingsClient(
             .map {
                 RawReading(
                     it[0].toInstant(),
-                    it[2].toInt(),
                     it[3],
+                    it[2].toInt(),
+
                     Triple(it[4].toDouble(), it[5].toDouble(), it[6].toDouble()),
                     it[7].toInt(),
                     java.lang.Long.parseLong(it[8].removePrefix("x"), 16)
                 )
-            }.usePlayerNames(matchToLoad)
+            }.usePlayerNames(getPlayerNames(matchToLoad))
 
-    private fun Sequence<RawReading>.usePlayerNames(matchToLoad: String) = map {
-        getPlayerNames(matchToLoad).combineReadingAndTeam(it)
+    private fun Sequence<RawReading>.usePlayerNames(map: Map<String, String>) = map {
+        map.combineReadingAndTeam(it)
     }
 
-    private fun getPlayerNames(matchToLoad: String): Map<Int, String> = teamLoader(matchToLoad)?.let {
-     CSVReader(InputStreamReader(it)).asSequence().map { Pair(it[0].toInt()-1, it[1]) }.toMap()}.orEmpty()
+    private fun getPlayerNames(matchToLoad: String): Map<String, String> = teamLoader(matchToLoad)?.let {
+     CSVReader(InputStreamReader(it)).asSequence().map { Pair(it[0], it[1]) }.toMap()}.orEmpty()
 
-    private fun Map<Int, String>.combineReadingAndTeam(rawReading: RawReading): Reading =
-        Reading(
+    private fun Map<String, String>.combineReadingAndTeam(rawReading: RawReading): Reading  {
+        if(this[rawReading.userTag] == null){
+            print("empty")
+        }
+        return Reading(
             rawReading.date,
-            this[rawReading.userTag] ?: rawReading.userTag.toString(),
-            rawReading.anchor,
+            this[rawReading.userTag] ?: rawReading.userTag,
+            rawReading.anchor.toString(),
             rawReading.position,
             rawReading.confidence,
             rawReading.counter
         )
+    }
 
 
     private fun String.toInstant() = split(".")
@@ -51,8 +56,8 @@ class FileReadingsClient(
 
 private data class RawReading(
     val date: Instant,
-    val userTag: Int,
-    val anchor: String,
+    val userTag: String,
+    val anchor: Int,
     val position: Triple<Double, Double, Double>,
     val confidence: Int,
     val counter: Long

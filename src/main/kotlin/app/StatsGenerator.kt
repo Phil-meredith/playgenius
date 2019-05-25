@@ -4,6 +4,17 @@ import clients.ReadingsClient
 import java.lang.Math.pow
 
 class StatsGenerator(private val readingsClient: ReadingsClient) {
+    fun totalDistance(match: String): Map<String, Double> {
+        return readingsClient
+            .getReadings(match)
+            .groupBy { it.userTag }
+            .mapValues { (_, v)->
+                v.sortedBy { it.date }
+                    .zipWithNext { reading1, reading2 -> distanceBetween(reading1.position, reading2.position).sanitise()
+                    }.sum()
+            }
+    }
+
     fun averagePosition(match: String): Map<String, Map<String, Triple<Double, Double, Double>>> =
         readingsClient.getReadings(match)
             .groupBy { it.anchor }
@@ -21,16 +32,6 @@ class StatsGenerator(private val readingsClient: ReadingsClient) {
                     }
             }
 
-    fun totalDistance(match: String): Map<String, Double> {
-        return readingsClient
-            .getReadings(match)
-            .groupBy { it.userTag }
-            .mapValues { (_, v)->
-                v.sortedBy { it.counter }
-                    .zipWithNext { reading1, reading2 -> distanceBetween(reading1.position, reading2.position).sanitise()
-                }.sum()
-            }
-    }
 }
 
 fun distanceBetween(pos1: Triple<Double, Double, Double>, pos2: Triple<Double, Double, Double>): Double =
