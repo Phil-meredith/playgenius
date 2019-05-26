@@ -11,8 +11,29 @@ import java.time.Instant
 class StatsGeneratorTest {
     val startDate = Instant.now()
 
-    val reading = Reading(startDate, "0", "blah", Triple(15.0, 1.5, 1.0), 0, 0)
+    val reading = Reading(startDate, UserId("0"), "blah", Triple(15.0, 1.5, 1.0), 0, 0)
 
+    @Test
+    fun `can calculate velocity between points on the minute`() {
+        val nextTime = startDate.plusSeconds(60)
+        val lastTime = startDate.plusSeconds(120)
+
+        val stubReadingsClient = object : ReadingsClient {
+            override fun getReadings(matchToLoad: String): Sequence<Reading> {
+                return listOf(
+                    reading,
+                    reading.copy(date = nextTime, position = Triple(5.0, 1.5, -1.0)),
+                    reading.copy(date = lastTime, position = Triple(6.0, 1.5, 0.0))
+                ).asSequence()
+            }
+        }
+        val stats = StatsGenerator(stubReadingsClient)
+
+        assertThat(stats.cumulativeDistance(MatchId("blah")), equalTo(
+            mapOf( UserId("0") to listOf(
+                DistanceAtTime(nextTime,Distance(10.0)),
+                DistanceAtTime(lastTime,Distance( 11.0))))))
+    }
 
     @Test
     fun `can generate average position for one anchor`() {
@@ -38,8 +59,8 @@ class StatsGeneratorTest {
                 return listOf(
                     reading,
                     reading.copy(position = Triple(5.0, 0.5, -1.0)),
-                    reading.copy(userTag = "two"),
-                    reading.copy(userTag = "two", position = Triple(6.0, 1.0, 0.0))
+                    reading.copy(userTag = UserId("two")),
+                    reading.copy(userTag = UserId("two"), position = Triple(6.0, 1.0, 0.0))
                 ).asSequence()
             }
         }
@@ -72,14 +93,14 @@ class StatsGeneratorTest {
         val stubReadingsClient = object : ReadingsClient {
             override fun getReadings(matchToLoad: String): Sequence<Reading> {
                 return listOf(
-                    Reading(startDate, "one", "0", Triple(-1.0, 1.0, 1.0), 0, 0),
-                    Reading(startDate, "one", "0", Triple(3.0, 4.0, 1.0), 0, 1),
-                    Reading(startDate, "two", "0", Triple(3.0, 4.0, 1.0), 0, 0),
-                    Reading(startDate, "two", "0", Triple(-1.0, 1.0, 1.0), 0, 1),
-                    Reading(startDate, "three", "0", Triple(-1.0, 1.0, 1.0), 0, 0),
-                    Reading(startDate, "three", "0", Triple(3.0, 4.0, 1.0), 0, 1),
-                    Reading(startDate, "three", "0", Triple(3.0, 4.0, 1.0), 0, 2),
-                    Reading(startDate, "three", "0", Triple(-1.0, 1.0, 1.0), 0, 3)
+                    Reading(startDate, UserId ("one"), "0", Triple(-1.0, 1.0, 1.0), 0, 0),
+                    Reading(startDate, UserId("one"), "0", Triple(3.0, 4.0, 1.0), 0, 1),
+                    Reading(startDate, UserId("two"), "0", Triple(3.0, 4.0, 1.0), 0, 0),
+                    Reading(startDate, UserId("two"), "0", Triple(-1.0, 1.0, 1.0), 0, 1),
+                    Reading(startDate, UserId("three"), "0", Triple(-1.0, 1.0, 1.0), 0, 0),
+                    Reading(startDate, UserId("three"), "0", Triple(3.0, 4.0, 1.0), 0, 1),
+                    Reading(startDate, UserId("three"), "0", Triple(3.0, 4.0, 1.0), 0, 2),
+                    Reading(startDate, UserId("three"), "0", Triple(-1.0, 1.0, 1.0), 0, 3)
                 ).asSequence()
             }
         }
@@ -87,11 +108,11 @@ class StatsGeneratorTest {
         val stats = StatsGenerator(stubReadingsClient)
 
         assertThat(
-            stats.totalDistance("not-used"), equalTo(
+            stats.totalDistance(MatchId("not-used")), equalTo(
                 mapOf(
-                    "one" to 5.0,
-                    "two" to 5.0,
-                    "three" to 10.0
+                    UserId("one") to Distance(5.0),
+                    UserId("two") to Distance(5.0),
+                    UserId("three") to Distance(10.0)
                 )
             )
         )

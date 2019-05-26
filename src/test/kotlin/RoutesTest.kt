@@ -35,4 +35,11 @@ class RoutesTest {
             |"9A26":20.10633371670572
             |}""".trimMargin().asJsonObject()))
     }
+
+    @Test
+    fun cumulativeDistanceTest(){
+        val response = Routes(StatsGenerator(readingsClient), MatchClient()).routes.invoke(Request(Method.GET, "/cumulativeDistance/testReadings"))
+        val actual = response.bodyString().asJsonObject()
+        assertThat(response.bodyString().asJsonObject().get("9A26")[0].toString(), equalTo("""{"x":"2019-03-03T23:16:00Z","y":16.170022204912822}"""))
+    }
 }

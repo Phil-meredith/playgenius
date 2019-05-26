@@ -1,5 +1,6 @@
 package clients
 
+import app.UserId
 import com.opencsv.CSVReader
 import java.io.InputStream
 import java.io.InputStreamReader
@@ -21,7 +22,6 @@ class FileReadingsClient(
                     it[0].toInstant(),
                     it[3],
                     it[2].toInt(),
-
                     Triple(it[4].toDouble(), it[5].toDouble(), it[6].toDouble()),
                     it[7].toInt(),
                     java.lang.Long.parseLong(it[8].removePrefix("x"), 16)
@@ -35,19 +35,14 @@ class FileReadingsClient(
     private fun getPlayerNames(matchToLoad: String): Map<String, String> = teamLoader(matchToLoad)?.let {
      CSVReader(InputStreamReader(it)).asSequence().map { Pair(it[0], it[1]) }.toMap()}.orEmpty()
 
-    private fun Map<String, String>.combineReadingAndTeam(rawReading: RawReading): Reading  {
-        if(this[rawReading.userTag] == null){
-            print("empty")
-        }
-        return Reading(
-            rawReading.date,
-            this[rawReading.userTag] ?: rawReading.userTag,
-            rawReading.anchor.toString(),
-            rawReading.position,
-            rawReading.confidence,
-            rawReading.counter
-        )
-    }
+    private fun Map<String, String>.combineReadingAndTeam(rawReading: RawReading): Reading = Reading(
+        rawReading.date,
+        UserId(this[rawReading.userTag] ?: rawReading.userTag),
+        rawReading.anchor.toString(),
+        rawReading.position,
+        rawReading.confidence,
+        rawReading.counter
+    )
 
 
     private fun String.toInstant() = split(".")
@@ -65,7 +60,7 @@ private data class RawReading(
 
 data class Reading(
     val date: Instant,
-    val userTag: String,
+    val userTag: UserId,
     val anchor: String,
     val position: Triple<Double, Double, Double>,
     val confidence: Int,
