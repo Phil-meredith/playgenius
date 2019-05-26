@@ -27,7 +27,7 @@ class Routes(private val statsGenerator: StatsGenerator, private val matchClient
                 statsGenerator.averagePosition(match).asJsonObject().asPrettyJsonString().toOk()
             },
             "/totalDistance" / Path.matchId().of("match") bindContract GET to { match ->
-                statsGenerator.totalDistance(match).mapKeys { (k, _) -> k.value }.mapValues { (_, y) -> y.value }
+                statsGenerator.totalDistance(match).entries.associate { (k, y) ->k.value to  y.value }
                     .asJsonObject().asPrettyJsonString().toOk()
             },
             "/cumulativeDistance" / Path.matchId().of("match") bindContract GET to { match ->
@@ -66,8 +66,7 @@ class Routes(private val statsGenerator: StatsGenerator, private val matchClient
         else body(String(this.javaClass.getResourceAsStream("/public/$assetType/$fileName").readBytes()))
 
     private fun Map<UserId, List<DistanceAtTime>>.toJsonString() =
-        mapKeys { (k, _) -> k.value }
-            .mapValues { (_, v) -> v.map { d -> mapOf("x" to d.time, "y" to d.distance.value) } }
+        entries.associate { (k, v) -> k.value to v.map { d -> mapOf("x" to d.time, "y" to d.distance.value) } }
             .asJsonObject().asPrettyJsonString()
 }
 

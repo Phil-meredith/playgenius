@@ -72,7 +72,8 @@ for(line = 0 ; line < players.length; line++){
 var myLineChart = new Chart(ctx, {
     type: 'line',
     data: lineChartData,
-    options: { scales: {
+    options: {
+                scales: {
                          xAxes: [{position: 'top'}],
                          yAxes: [{
                              ticks: {
