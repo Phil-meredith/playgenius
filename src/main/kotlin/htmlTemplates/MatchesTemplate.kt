@@ -20,7 +20,7 @@ class MatchesTemplate(private val matches: Matches) {
                 ul {
                     matches.value.forEach {
                         li {
-                            a(href="/match/${it.value}"){+it.value}
+                            a(href="/simpleMatch/${it.value}"){+it.value}
                         }
                     }
                 }

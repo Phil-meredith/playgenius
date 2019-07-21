@@ -3,6 +3,7 @@ package app
 import clients.MatchClient
 import htmlTemplates.MatchTemplate
 import htmlTemplates.MatchesTemplate
+import htmlTemplates.SimpleMatchTemplate
 import org.http4k.contract.bindContract
 import org.http4k.contract.contract
 import org.http4k.contract.div
@@ -22,9 +23,22 @@ class Routes(private val statsGenerator: StatsGenerator, private val matchClient
         routes.plusAssign(listOf(
             "/" bindContract GET to assetResponse("html", "index.html"),
             "/match" / Path.matchId().of("match") bindContract GET to { match -> MatchTemplate(match).html.toOk() },
+            "/simpleMatch" / Path.matchId().of("match")   bindContract GET to {match ->
+                SimpleMatchTemplate(
+                    match,
+                    matchClient.getTeamFor(match),
+                    statsGenerator.maximumSpeed(match),
+                    statsGenerator.totalDistance(match),
+                    matchClient.matchResult()
+                ).html.toOk()
+            },
             "/matches" bindContract GET to MatchesTemplate(matchClient.getMatches()).html.toOk(),
+
             "/averagePosition" / Path.string().of("match") bindContract GET to { match ->
                 statsGenerator.averagePosition(match).asJsonObject().asPrettyJsonString().toOk()
+            },
+            "/team" / Path.matchId().of("match") bindContract GET to { match ->
+                matchClient.getTeamFor(match).asJsonObject().asPrettyJsonString().toOk()
             },
             "/totalDistance" / Path.matchId().of("match") bindContract GET to { match ->
                 statsGenerator.totalDistance(match).entries.associate { (k, y) ->k.value to  y.value }
