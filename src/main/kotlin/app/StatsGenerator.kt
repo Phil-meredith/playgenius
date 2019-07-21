@@ -31,25 +31,28 @@ class StatsGenerator(private val readingsClient: ReadingsClient) {
         }.sum()
     }
 
-    fun cumulativeDistance(matchId: MatchId): Map<UserId, List<DistanceAtTime>> {
-        return manipulateReadingsPerUser(matchId) {
-            zipWithNext { reading1, reading2 ->
-                DistanceAtTime(reading2.dateTime, distanceBetween(reading1.position, reading2.position).sanitise())
-            }
-                .groupBy { d -> d.time.truncatedTo(ChronoUnit.MINUTES) }
-                .map { (timeAtMinute, minuteDistances) -> minuteDistances.sumDuring(timeAtMinute) }
-                .cumulativeSum()
+    fun cumulativeDistance(matchId: MatchId): Map<UserId, List<DistanceAtTime>> = manipulateReadingsPerUser(matchId) {
+        zipWithNext { reading1, reading2 ->
+            DistanceAtTime(reading2.dateTime, distanceBetween(reading1.position, reading2.position).sanitise())
         }
+            .groupBy { d -> d.time.truncatedTo(ChronoUnit.MINUTES) }
+            .map { (timeAtMinute, minuteDistances) -> minuteDistances.sumDuring(timeAtMinute) }
+            .cumulativeSum()
     }
 
-    fun maximumSpeed(matchId: MatchId): Map<UserId, DistanceAtTime> {
-        return manipulateReadingsPerUser(matchId) {
-            zipWithNext { reading1, reading2 ->
-                DistanceAtTime(reading2.dateTime.truncatedTo(ChronoUnit.SECONDS), distanceBetween(reading1.position, reading2.position).sanitise())
-            }
-                .groupBy { d -> d.time}
-                .map { (time, distances) -> distances.sumDuring(time.plusSeconds(1)) }
-        }.mapValues{ (_,v) -> v.maxBy { it.distance.value }?: v[0] }
+    fun maximumSpeed(matchId: MatchId): Map<UserId, DistanceAtTime> = speedPerSecond(matchId)
+         .mapValues { (_, v) -> v.maxBy { it.distance.value } ?: v[0] }
+
+    private fun speedPerSecond(matchId: MatchId): Map<UserId, List<DistanceAtTime>> = manipulateReadingsPerUser(matchId) {
+        zipWithNext { reading1, reading2 ->
+            DistanceAtTime(
+                reading2.dateTime.truncatedTo(ChronoUnit.SECONDS),
+                distanceBetween(reading1.position, reading2.position).sanitise()
+            )
+        }
+            .groupBy { d -> d.time }
+            .map { (time, distances) -> distances.sumDuring(time) }
+            .map{  it.copy(time = it.time.plusSeconds(1)) }
     }
 
     private fun List<DistanceAtTime>.sumDuring(time: Instant) =
