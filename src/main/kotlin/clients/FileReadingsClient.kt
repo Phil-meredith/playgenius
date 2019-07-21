@@ -59,7 +59,7 @@ private data class RawReading(
 )
 
 data class Reading(
-    val date: Instant,
+    val dateTime: Instant,
     val userTag: UserId,
     val anchor: String,
     val position: Triple<Double, Double, Double>,

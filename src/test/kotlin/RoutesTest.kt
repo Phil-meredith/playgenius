@@ -40,6 +40,13 @@ class RoutesTest {
     fun cumulativeDistanceTest(){
         val response = Routes(StatsGenerator(readingsClient), MatchClient()).routes.invoke(Request(Method.GET, "/cumulativeDistance/testReadings"))
         val actual = response.bodyString().asJsonObject()
-        assertThat(response.bodyString().asJsonObject().get("9A26")[0].toString(), equalTo("""{"x":"2019-03-03T23:16:00Z","y":16.170022204912822}"""))
+        assertThat(actual.get("9A26")[0].toString(), equalTo("""{"x":"2019-03-03T23:16:00Z","y":16.170022204912822}"""))
+    }
+
+    @Test
+    fun maximumSpeedTest(){
+        val response = Routes(StatsGenerator(readingsClient), MatchClient()).routes.invoke(Request(Method.GET, "/maximumSpeed/testReadings"))
+        val actual = response.bodyString().asJsonObject()
+        assertThat(actual.get("9A26").toString(), equalTo("1.636457412991491"))
     }
 }

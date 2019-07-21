@@ -34,16 +34,26 @@ class StatsGenerator(private val readingsClient: ReadingsClient) {
     fun cumulativeDistance(matchId: MatchId): Map<UserId, List<DistanceAtTime>> {
         return manipulateReadingsPerUser(matchId) {
             zipWithNext { reading1, reading2 ->
-                DistanceAtTime(reading2.date, distanceBetween(reading1.position, reading2.position).sanitise())
+                DistanceAtTime(reading2.dateTime, distanceBetween(reading1.position, reading2.position).sanitise())
             }
                 .groupBy { d -> d.time.truncatedTo(ChronoUnit.MINUTES) }
-                .map { (timeAtMinute, minuteDistances) -> minuteDistances.sumOnTheMinute(timeAtMinute) }
+                .map { (timeAtMinute, minuteDistances) -> minuteDistances.sumDuring(timeAtMinute) }
                 .cumulativeSum()
         }
     }
 
-    private fun List<DistanceAtTime>.sumOnTheMinute(timeAtTheMinute: Instant) =
-        reduce { acc, distance -> DistanceAtTime(timeAtTheMinute, acc.distance + distance.distance) }
+    fun maximumSpeed(matchId: MatchId): Map<UserId, DistanceAtTime> {
+        return manipulateReadingsPerUser(matchId) {
+            zipWithNext { reading1, reading2 ->
+                DistanceAtTime(reading2.dateTime.truncatedTo(ChronoUnit.SECONDS), distanceBetween(reading1.position, reading2.position).sanitise())
+            }
+                .groupBy { d -> d.time}
+                .map { (time, distances) -> distances.sumDuring(time.plusSeconds(1)) }
+        }.mapValues{ (_,v) -> v.maxBy { it.distance.value }?: v[0] }
+    }
+
+    private fun List<DistanceAtTime>.sumDuring(time: Instant) =
+        reduce { acc, distance -> DistanceAtTime(time, acc.distance + distance.distance) }
 
     private fun <R> manipulateReadingsPerUser(
         matchId: MatchId,
@@ -53,7 +63,7 @@ class StatsGenerator(private val readingsClient: ReadingsClient) {
             .getReadings(matchId.value)
             .groupBy { it.userTag }
             .mapValues { (_, v) ->
-                v.sortedBy { it.date }.applyToUserReadings()
+                v.sortedBy { it.dateTime }.applyToUserReadings()
             }
 
     private fun List<DistanceAtTime>.cumulativeSum(): List<DistanceAtTime> {

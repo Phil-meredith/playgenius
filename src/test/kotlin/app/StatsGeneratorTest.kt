@@ -14,7 +14,7 @@ class StatsGeneratorTest {
     val reading = Reading(startDate, UserId("0"), "blah", Triple(15.0, 1.5, 1.0), 0, 0)
 
     @Test
-    fun `can calculate velocity between points on the minute`() {
+    fun `can calculate cumulative distance`() {
         val nextTime = startDate.plusSeconds(60)
         val lastTime = startDate.plusSeconds(120)
 
@@ -22,8 +22,8 @@ class StatsGeneratorTest {
             override fun getReadings(matchToLoad: String): Sequence<Reading> {
                 return listOf(
                     reading,
-                    reading.copy(date = nextTime, position = Triple(5.0, 1.5, -1.0)),
-                    reading.copy(date = lastTime, position = Triple(6.0, 1.5, 0.0))
+                    reading.copy(dateTime = nextTime, position = Triple(5.0, 1.5, -1.0)),
+                    reading.copy(dateTime = lastTime, position = Triple(6.0, 1.5, 0.0))
                 ).asSequence()
             }
         }

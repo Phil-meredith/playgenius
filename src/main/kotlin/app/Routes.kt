@@ -32,7 +32,16 @@ class Routes(private val statsGenerator: StatsGenerator, private val matchClient
             },
             "/cumulativeDistance" / Path.matchId().of("match") bindContract GET to { match ->
                 statsGenerator.cumulativeDistance(match)
-                    .toJsonString()
+                    .toCumulativeDistanceJsonString()
+                    .toOk()
+            },
+
+            "/maximumSpeed" / Path.matchId().of("match") bindContract GET to { match ->
+                statsGenerator.maximumSpeed(match)
+                    .map{ (userId, maxSpeed) -> userId.value to maxSpeed.distance.value }
+                    .toMap()
+                    .asJsonObject()
+                    .asPrettyJsonString()
                     .toOk()
             },
             Path.string().of("assetType") / Path.string().of("fileName") bindContract GET to { assetType, fileName ->
@@ -65,7 +74,7 @@ class Routes(private val statsGenerator: StatsGenerator, private val matchClient
         )
         else body(String(this.javaClass.getResourceAsStream("/public/$assetType/$fileName").readBytes()))
 
-    private fun Map<UserId, List<DistanceAtTime>>.toJsonString() =
+    private fun Map<UserId, List<DistanceAtTime>>.toCumulativeDistanceJsonString() =
         entries.associate { (k, v) -> k.value to v.map { d -> mapOf("x" to d.time, "y" to d.distance.value) } }
             .asJsonObject().asPrettyJsonString()
 }
