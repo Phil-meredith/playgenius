@@ -2,6 +2,10 @@ package app
 
 import clients.Reading
 import clients.ReadingsClient
+import model.Distance
+import model.DistanceAtTime
+import model.MatchId
+import model.UserId
 import java.lang.Math.pow
 import java.time.Instant
 import java.time.temporal.ChronoUnit
@@ -80,14 +84,5 @@ fun distanceBetween(pos1: Triple<Double, Double, Double>, pos2: Triple<Double, D
 
 private fun Double.sanitise(): Distance = if (this > 100) Distance(0.0) else Distance(this)
 
-data class DistanceAtTime(val time: Instant, val distance: Distance)
-data class MatchId(val value: String)
-data class UserId(val value: String)
-
-data class Distance(val value: Double) {
-    operator fun plus(p: Distance): Distance {
-        return Distance(value + p.value)
-    }
-}
 
 fun Iterable<Distance>.sum(): Distance = this.reduce { acc, distance -> acc + distance }

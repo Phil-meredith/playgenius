@@ -2,6 +2,7 @@ import clients.Reading
 import clients.FileReadingsClient
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
+import model.UserId
 import org.junit.Test
 import java.time.Instant
 
@@ -19,7 +20,7 @@ class ReadingsParserTest {
             equalTo(
                 Reading(
                     Instant.parse("2019-03-03T23:16:31.000999228Z"),
-                    app.UserId ("9A26"),
+                    UserId ("9A26"),
                     "0",
                     Triple(1.32, 1.38, 0.32),
                     0,

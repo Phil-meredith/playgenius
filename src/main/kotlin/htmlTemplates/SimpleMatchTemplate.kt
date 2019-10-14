@@ -1,13 +1,14 @@
 package htmlTemplates
 
-import app.Distance
-import app.DistanceAtTime
-import app.MatchId
-import app.UserId
 import clients.GameResult
 import clients.Team
+import htmlTemplates.components.splashHeader
 import kotlinx.html.*
 import kotlinx.html.stream.createHTML
+import model.Distance
+import model.DistanceAtTime
+import model.MatchId
+import model.UserId
 import kotlin.math.round
 
 

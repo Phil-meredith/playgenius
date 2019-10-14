@@ -4,6 +4,9 @@ import clients.MatchClient
 import htmlTemplates.MatchTemplate
 import htmlTemplates.MatchesTemplate
 import htmlTemplates.SimpleMatchTemplate
+import model.DistanceAtTime
+import model.MatchId
+import model.UserId
 import org.http4k.contract.bindContract
 import org.http4k.contract.contract
 import org.http4k.contract.div
@@ -92,5 +95,3 @@ class Routes(private val statsGenerator: StatsGenerator, private val matchClient
         entries.associate { (k, v) -> k.value to v.map { d -> mapOf("x" to d.time, "y" to d.distance.value) } }
             .asJsonObject().asPrettyJsonString()
 }
-
-data class Matches(val value: List<MatchId>)

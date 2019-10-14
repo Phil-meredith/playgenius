@@ -4,6 +4,10 @@ import clients.Reading
 import clients.ReadingsClient
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
+import model.Distance
+import model.DistanceAtTime
+import model.MatchId
+import model.UserId
 import org.junit.Test
 import java.time.Instant
 
@@ -26,7 +30,8 @@ class MaximumSpeedTest {
         }
         val stats = StatsGenerator(stubReadingsClient)
         assertThat(stats.maximumSpeed(MatchId("blah")), equalTo(mapOf( UserId("0") to
-            DistanceAtTime(startTime.plusSeconds(2),Distance(10.0)))))
+            DistanceAtTime(startTime.plusSeconds(2), Distance(10.0))
+        )))
     }
 
     @Test

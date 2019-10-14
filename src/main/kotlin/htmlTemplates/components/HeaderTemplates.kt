@@ -1,4 +1,4 @@
-package htmlTemplates
+package htmlTemplates.components
 
 import kotlinx.html.*
 

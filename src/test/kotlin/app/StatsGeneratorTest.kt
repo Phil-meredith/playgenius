@@ -4,6 +4,10 @@ import clients.Reading
 import clients.ReadingsClient
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
+import model.Distance
+import model.DistanceAtTime
+import model.MatchId
+import model.UserId
 import org.junit.Test
 import java.time.Instant
 

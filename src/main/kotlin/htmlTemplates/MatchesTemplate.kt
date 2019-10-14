@@ -1,8 +1,10 @@
 package htmlTemplates
 
-import app.Matches
+import htmlTemplates.components.listSection
+import htmlTemplates.components.splashHeader
 import kotlinx.html.*
 import kotlinx.html.stream.createHTML
+import model.Matches
 
 
 class MatchesTemplate(private val matches: Matches) {
@@ -15,15 +17,9 @@ class MatchesTemplate(private val matches: Matches) {
             meta("viewport", "width=device-width, initial-scale=1.0")
         }
         body {
-            splashHeader{}
+            splashHeader {}
             article {
-                ul {
-                    matches.value.forEach {
-                        li {
-                            a(href="/simpleMatch/${it.value}"){+it.value}
-                        }
-                    }
-                }
+                listSection("Matches", matches) {}
             }
         }
     }

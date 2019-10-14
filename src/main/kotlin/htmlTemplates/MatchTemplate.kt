@@ -1,8 +1,9 @@
 package htmlTemplates
 
-import app.MatchId
+import htmlTemplates.components.splashHeader
 import kotlinx.html.*
 import kotlinx.html.stream.createHTML
+import model.MatchId
 
 
 class MatchTemplate(private val matchId: MatchId) {
