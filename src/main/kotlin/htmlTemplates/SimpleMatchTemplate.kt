@@ -2,6 +2,7 @@ package htmlTemplates
 
 import clients.GameResult
 import clients.Team
+import htmlTemplates.components.loggedInNavBar
 import htmlTemplates.components.splashHeader
 import kotlinx.html.*
 import kotlinx.html.stream.createHTML
@@ -29,7 +30,7 @@ class SimpleMatchTemplate(
             meta("matchId", matchId.value)
         }
         body {
-            splashHeader {}
+            splashHeader {loggedInNavBar()}
             div("match") {
                 div("match-info") {
                     div("result"){

@@ -1,5 +1,6 @@
 package htmlTemplates
 
+import htmlTemplates.components.loggedInNavBar
 import htmlTemplates.components.splashHeader
 import kotlinx.html.*
 import kotlinx.html.stream.createHTML
@@ -19,7 +20,7 @@ class MatchTemplate(private val matchId: MatchId) {
             script(type= ScriptType.textJScript, src = "/js/main.js"){}
         }
         body {
-            splashHeader{}
+            splashHeader{loggedInNavBar()}
             article {
                div{
                    id = "charts"

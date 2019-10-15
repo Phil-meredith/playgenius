@@ -1,13 +1,18 @@
 package htmlTemplates
 
-import htmlTemplates.components.listSection
-import htmlTemplates.components.splashHeader
+import htmlTemplates.components.*
 import kotlinx.html.*
 import kotlinx.html.stream.createHTML
 import model.Matches
+import model.PersonalStats
+import model.TeamStats
 
 
-class MatchesTemplate(private val matches: Matches) {
+class MatchesTemplate(
+    private val matches: Matches,
+    private val stats: PersonalStats,
+    private val teamStats: TeamStats
+) {
 
     val html = createHTML().html {
         head {
@@ -17,9 +22,20 @@ class MatchesTemplate(private val matches: Matches) {
             meta("viewport", "width=device-width, initial-scale=1.0")
         }
         body {
-            splashHeader {}
-            article {
-                listSection("Matches", matches) {}
+            splashHeader { loggedInNavBar() }
+            div ("match"){
+                listSection("Your Matches", "results", { yourMatches(matches)() })
+                div("stats") {
+                    statsSection(
+                        "Your Stats", "result", listOf(
+                            allYourStats("Best", stats.bestStats),
+                            allYourStats("Average", stats.average),
+                            allYourStats("Cumulative", stats.allTime)
+                        )
+                    )
+                    listSection("Team Stats", "result", { teamStats(teamStats)() })
+                }
+
             }
         }
     }
