@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
     val readingsClient =
         FileReadingsClient( { name -> Routes::class.java.getResourceAsStream("/public/readings/$name/readings.csv") },
             { name -> try{Routes::class.java.getResourceAsStream("/public/readings/$name/team.csv") } catch (e: IllegalStateException){null}})
-    val statsController = StatsGenerator(readingsClient)
+    val statsController = MatchStatsGenerator(readingsClient)
 
-    audit.then(Routes(statsController, MatchClient()).routes).asServer(Jetty(port)).start()
+    audit.then(Routes(statsController, MatchClient(), PersonalStatsClient(), TeamStatsClient()).routes).asServer(Jetty(port)).start()
 }

@@ -71,6 +71,12 @@ class SimpleMatchTemplate(
                     }
                 }
             }
+            div("replay"){
+                canvas {
+                    attributes.put( "width","150")
+                    attributes.put( "height","150")
+                }
+            }
         }
     }
 }

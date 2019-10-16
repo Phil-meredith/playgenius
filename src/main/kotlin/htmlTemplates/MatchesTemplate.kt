@@ -24,7 +24,7 @@ class MatchesTemplate(
         body {
             splashHeader { loggedInNavBar() }
             div ("match"){
-                listSection("Your Matches", "results", { yourMatches(matches)() })
+                listSection("Your Matches", "results") { yourMatches(matches)() }
                 div("stats") {
                     statsSection(
                         "Your Stats", "result", listOf(

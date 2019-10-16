@@ -4,6 +4,7 @@ import clients.MatchClient
 import htmlTemplates.MatchTemplate
 import htmlTemplates.MatchesTemplate
 import htmlTemplates.SimpleMatchTemplate
+import htmlTemplates.components.teamStats
 import model.*
 import org.http4k.contract.bindContract
 import org.http4k.contract.contract
@@ -16,7 +17,38 @@ import org.http4k.lens.Path
 import org.http4k.lens.string
 import java.nio.ByteBuffer
 
-class Routes(private val statsGenerator: StatsGenerator, private val matchClient: MatchClient) {
+class PersonalStatsClient{
+    fun personalStats(userId: UserId) = PersonalStats(listOf(
+        Stats("Quickest Speed","10ms"),
+        Stats("Furthest Run Speed","2k"),
+        Stats("Most Goals Scored","5")),
+        listOf(
+            Stats("Average Speed","10ms"),
+            Stats("Average distance ","2k"),
+            Stats("Average Goals Scored","5")
+        ),
+        listOf(Stats("All time Goals Scored","25"),
+            Stats("All time quickest speed","12ms"),
+            Stats("All time total run","100k")
+        ))
+}
+
+class TeamStatsClient{
+    fun teamStats(teamId: TeamId) = TeamStats(listOf(
+        Stats("Played","12"),
+        Stats("Wins","10"),
+        Stats("Loses","2"),
+        Stats("Draws","0"),
+        Stats("Fastest player","Sam"),
+        Stats("Best goalscore","Marcus"),
+        Stats("Most games played","Matt")
+    ))
+}
+
+class Routes(private val statsGenerator: MatchStatsGenerator,
+             private val matchClient: MatchClient,
+             private val personalStatsClient: PersonalStatsClient,
+             private val teamStatsClient: TeamStatsClient) {
 
     private fun Path.matchId() = map { match -> MatchId(match) }
 
@@ -33,29 +65,10 @@ class Routes(private val statsGenerator: StatsGenerator, private val matchClient
                     matchClient.matchResult()
                 ).html.toOk()
             },
-            "/matches" bindContract GET to MatchesTemplate(matchClient.getMatches(),
-                PersonalStats(listOf(
-                    Stats("Quickest Speed","10ms"),
-                    Stats("Furthest Run Speed","2k"),
-                    Stats("Most Goals Scored","5")),
-                    listOf(
-                    Stats("Average Speed","10ms"),
-                    Stats("Average distance ","2k"),
-                    Stats("Average Goals Scored","5")
-                    ),
-                    listOf(Stats("All time Goals Scored","25"),
-                    Stats("All time quickest speed","12ms"),
-                    Stats("All time total run","100k")
-                )),
-                TeamStats(listOf(
-                    Stats("Played","12"),
-                    Stats("Wins","10"),
-                    Stats("Loses","2"),
-                    Stats("Draws","0"),
-                    Stats("Fastest player","Sam"),
-                    Stats("Best goalscore","Marcus"),
-                    Stats("Most games played","Matt")
-                ))
+            "/matches" bindContract GET to MatchesTemplate(
+                matchClient.getMatches(),
+                personalStatsClient.personalStats(UserId("123")),
+                teamStatsClient.teamStats(TeamId("123"))
                 ).html.toOk(),
 
             "/averagePosition" / Path.string().of("match") bindContract GET to { match ->

@@ -31,7 +31,7 @@ class StatsGeneratorTest {
                 ).asSequence()
             }
         }
-        val stats = StatsGenerator(stubReadingsClient)
+        val stats = MatchStatsGenerator(stubReadingsClient)
 
         assertThat(stats.cumulativeDistance(MatchId("blah")), equalTo(
             mapOf( UserId("0") to listOf(
@@ -51,7 +51,7 @@ class StatsGeneratorTest {
             }
         }
 
-        val stats = StatsGenerator(stubReadingsClient)
+        val stats = MatchStatsGenerator(stubReadingsClient)
         assertThat(stats.averagePosition("not-used"), equalTo(mapOf("blah" to mapOf("0" to Triple(10.0, 1.0, 0.0)))))
     }
 
@@ -69,7 +69,7 @@ class StatsGeneratorTest {
             }
         }
 
-        val stats = StatsGenerator(stubReadingsClient)
+        val stats = MatchStatsGenerator(stubReadingsClient)
         assertThat(
             stats.averagePosition("not-used"), equalTo(
                 mapOf(
@@ -109,7 +109,7 @@ class StatsGeneratorTest {
             }
         }
 
-        val stats = StatsGenerator(stubReadingsClient)
+        val stats = MatchStatsGenerator(stubReadingsClient)
 
         assertThat(
             stats.totalDistance(MatchId("not-used")), equalTo(

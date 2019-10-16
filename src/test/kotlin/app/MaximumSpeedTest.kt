@@ -28,7 +28,7 @@ class MaximumSpeedTest {
                 ).asSequence()
             }
         }
-        val stats = StatsGenerator(stubReadingsClient)
+        val stats = MatchStatsGenerator(stubReadingsClient)
         assertThat(stats.maximumSpeed(MatchId("blah")), equalTo(mapOf( UserId("0") to
             DistanceAtTime(startTime.plusSeconds(2), Distance(10.0))
         )))
@@ -47,7 +47,7 @@ class MaximumSpeedTest {
                 ).asSequence()
             }
         }
-        val stats = StatsGenerator(stubReadingsClient)
+        val stats = MatchStatsGenerator(stubReadingsClient)
         assertThat(stats.maximumSpeed(MatchId("blah")), equalTo(mapOf( UserId("0") to
             DistanceAtTime(Instant.parse("2019-10-20T10:10:02Z"),Distance( 9.0)))))
     }
@@ -64,7 +64,7 @@ class MaximumSpeedTest {
                 ).asSequence()
             }
         }
-        val stats = StatsGenerator(stubReadingsClient)
+        val stats = MatchStatsGenerator(stubReadingsClient)
         assertThat(stats.maximumSpeed(MatchId("blah")), equalTo(mapOf( UserId("0") to
                 DistanceAtTime(Instant.parse("2019-10-20T10:10:06Z"),Distance( 9.0)))))
     }
