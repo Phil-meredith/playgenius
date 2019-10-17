@@ -28,6 +28,7 @@ class SimpleMatchTemplate(
             link("/css/main.css", rel = "stylesheet", type = "text/css")
             meta("viewport", "width=device-width, initial-scale=1.0")
             meta("matchId", matchId.value)
+            script(type= ScriptType.textJScript, src = "/js/match.js"){}
         }
         body {
             splashHeader {loggedInNavBar()}
@@ -71,10 +72,15 @@ class SimpleMatchTemplate(
                     }
                 }
             }
+            button {
+                attributes.put( "id","draw-game-canvas")
+                +"play game"
+            }
             div("replay"){
                 canvas {
-                    attributes.put( "width","150")
-                    attributes.put( "height","150")
+                    attributes.put( "id","game-canvas")
+                    attributes.put( "width","600")
+                    attributes.put( "height","600")
                 }
             }
         }
