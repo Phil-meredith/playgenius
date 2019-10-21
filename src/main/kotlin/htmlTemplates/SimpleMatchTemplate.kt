@@ -28,6 +28,7 @@ class SimpleMatchTemplate(
             link("/css/main.css", rel = "stylesheet", type = "text/css")
             meta("viewport", "width=device-width, initial-scale=1.0")
             meta("matchId", matchId.value)
+            meta("replayMatch", emptyMap<String, List<List<Int>>>().toString())
             script(type= ScriptType.textJScript, src = "/js/match.js"){}
         }
         body {

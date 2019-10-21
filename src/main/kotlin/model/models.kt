@@ -7,7 +7,7 @@ abstract class MicroType {
 }
 
 data class Matches(override val value: List<MatchId>) : MicroType()
-data class PersonalStats(val bestStats: List<Stats>, val allTime: List<Stats>, val average: List<Stats>)
+data class PersonalStats(val bestStats: List<Stats>, val cumulative: List<Stats>, val average: List<Stats>)
 data class TeamStats(override val value: List<Stats>) : MicroType()
 
 data class DistanceAtTime(val time: Instant, val distance: Distance)

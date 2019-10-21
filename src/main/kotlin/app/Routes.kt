@@ -1,10 +1,11 @@
 package app
 
 import clients.MatchClient
+import clients.PersonalStatsClient
+import clients.TeamStatsClient
 import htmlTemplates.MatchTemplate
 import htmlTemplates.MatchesTemplate
 import htmlTemplates.SimpleMatchTemplate
-import htmlTemplates.components.teamStats
 import model.*
 import org.http4k.contract.bindContract
 import org.http4k.contract.contract
@@ -17,38 +18,11 @@ import org.http4k.lens.Path
 import org.http4k.lens.string
 import java.nio.ByteBuffer
 
-class PersonalStatsClient{
-    fun personalStats(userId: UserId) = PersonalStats(listOf(
-        Stats("Quickest Speed","10ms"),
-        Stats("Furthest Run Speed","2k"),
-        Stats("Most Goals Scored","5")),
-        listOf(
-            Stats("Average Speed","10ms"),
-            Stats("Average distance ","2k"),
-            Stats("Average Goals Scored","5")
-        ),
-        listOf(Stats("All time Goals Scored","25"),
-            Stats("All time quickest speed","12ms"),
-            Stats("All time total run","100k")
-        ))
-}
-
-class TeamStatsClient{
-    fun teamStats(teamId: TeamId) = TeamStats(listOf(
-        Stats("Played","12"),
-        Stats("Wins","10"),
-        Stats("Loses","2"),
-        Stats("Draws","0"),
-        Stats("Fastest player","Sam"),
-        Stats("Best goalscore","Marcus"),
-        Stats("Most games played","Matt")
-    ))
-}
-
 class Routes(private val statsGenerator: MatchStatsGenerator,
              private val matchClient: MatchClient,
              private val personalStatsClient: PersonalStatsClient,
-             private val teamStatsClient: TeamStatsClient) {
+             private val teamStatsClient: TeamStatsClient
+) {
 
     private fun Path.matchId() = map { match -> MatchId(match) }
 
@@ -86,7 +60,6 @@ class Routes(private val statsGenerator: MatchStatsGenerator,
                     .toCumulativeDistanceJsonString()
                     .toOk()
             },
-
             "/maximumSpeed" / Path.matchId().of("match") bindContract GET to { match ->
                 statsGenerator.maximumSpeed(match)
                     .map{ (userId, maxSpeed) -> userId.value to maxSpeed.distance.value }
@@ -94,6 +67,12 @@ class Routes(private val statsGenerator: MatchStatsGenerator,
                     .asJsonObject()
                     .asPrettyJsonString()
                     .toOk()
+            },
+            "/replayGame" / Path.matchId().of("match") bindContract GET to { match ->
+                statsGenerator
+                    .replayPositions(match)
+                    .mapKeys { k -> k.key.value }
+                    .asJsonObject().asPrettyJsonString().toOk()
             },
             Path.string().of("assetType") / Path.string().of("fileName") bindContract GET to { assetType, fileName ->
                 assetResponse(assetType, fileName)

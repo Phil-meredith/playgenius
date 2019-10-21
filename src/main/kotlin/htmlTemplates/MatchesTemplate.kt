@@ -30,7 +30,7 @@ class MatchesTemplate(
                         "Your Stats", "result", listOf(
                             allYourStats("Best", stats.bestStats),
                             allYourStats("Average", stats.average),
-                            allYourStats("Cumulative", stats.allTime)
+                            allYourStats("Cumulative", stats.cumulative)
                         )
                     )
                     listSection("Team Stats", "result", { teamStats(teamStats)() })

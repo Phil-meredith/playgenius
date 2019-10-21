@@ -2,6 +2,8 @@ package app
 
 import clients.FileReadingsClient
 import clients.MatchClient
+import clients.PersonalStatsClient
+import clients.TeamStatsClient
 import org.http4k.core.*
 import org.http4k.server.Jetty
 import org.http4k.server.asServer

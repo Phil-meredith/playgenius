@@ -9,6 +9,7 @@ import model.UserId
 import java.lang.Math.pow
 import java.time.Instant
 import java.time.temporal.ChronoUnit
+import kotlin.math.roundToInt
 
 class MatchStatsGenerator(private val readingsClient: ReadingsClient) {
 
@@ -28,6 +29,13 @@ class MatchStatsGenerator(private val readingsClient: ReadingsClient) {
                             }.run { copy(first / v.size, second / v.size, third / v.size) }
                     }
             }
+
+    fun replayPositions(matchId: MatchId): Map<UserId, List<List<Int>>> =
+        manipulateReadingsPerUser(matchId){
+            this.map { r -> listOf(r.position.first.roundToInt(), r.position.second.roundToInt()) }
+        }
+
+    // mapOf("sam" to listOf(listOf(0,0),listOf(180,47), listOf(280,47)))
 
     fun totalDistance(matchId: MatchId): Map<UserId, Distance> = manipulateReadingsPerUser(matchId) {
         zipWithNext { reading1, reading2 ->

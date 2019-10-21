@@ -1,10 +1,9 @@
 import app.Routes
 import app.MatchStatsGenerator
-import app.PersonalStatsClient
-import app.TeamStatsClient
+import clients.PersonalStatsClient
+import clients.TeamStatsClient
 import clients.FileReadingsClient
 import clients.MatchClient
-import clients.Team
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
 import org.http4k.core.Method
