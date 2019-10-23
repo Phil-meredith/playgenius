@@ -23,13 +23,13 @@ class ProfileTemplate(private val userData: UserData) {
             splashHeader{loggedInNavBar()}
             article("profile") {
                 div("stats-card") {
-                    div("stats-card__circular") {img(src="/image/${userData.imgUrl ?: "billy_hughes.jpg"}")  }
-                    div("player-info"){
-                        userData.nickname?.apply { h1{ + userData.nickname} }
-                        h1 { + "${userData.firstName} ${userData.surname}"  }
-                        h3 { + "${userData.position}"  }
+                    div("stats-card__circular stats-card--top") {img(src="/image/${userData.imgUrl ?: "billy_hughes.jpg"}")  }
+                    div("stats-card__player-info stats-card--top"){
+                        userData.nickname?.apply { div("stats-card__player-info--overlap"){h1{ + userData.nickname}} }
+                        div("stats-card__player-info--overlap"){h1 { + "${userData.firstName} ${userData.surname}"  }}
+                        div("stats-card__player-info--overlap"){h3 { + "${userData.position}"  }}
                     }
-                    div("stats"){
+                    div("stats-card__stats"){
                         table {
                             thead {
                                 tr {

@@ -21,7 +21,11 @@ class PersonalStatsClient{
         )
     )
 
-    fun individualMatchStats(userId: UserId):  List<ProfileStat> = listOf(ProfileStat("2019","Dons", 4,2,0,12))
+    fun individualMatchStats(userId: UserId):  List<ProfileStat> = listOf(
+        ProfileStat("19/20","Dons", 4,2,0,12),
+        ProfileStat("18/19","Dons", 6,0,0,18),
+        ProfileStat("17/18","Dons", 2,3,1,7)
+    )
 }
 
 data class ProfileStat(val season: String, val teamName: String, val wins: Int, val loses: Int, val draw: Int, val goalsScored: Int )

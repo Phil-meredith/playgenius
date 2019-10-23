@@ -131,22 +131,48 @@ header {
     margin-top: 3%;
 
     .stats-card{
+        background-color: #F0ECEB;
+        width: 21rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 29% 69%;
+        grid-row-gap: 1rem;
+        grid-template-areas: "profile-pic profile-name"
+                             "profile-stats profile-stats";
+        &--top{
+        margin-top:0.8rem;
+        }
 
        &__circular{
+            margin-left: 0.2rem;
             display: inline-block;
             position: relative;
             width: 200px;
             height: 200px;
             overflow: hidden;
             border-radius: 50%;
+            grid-area: profile-pic;
 
             img{
                 width: auto;
                 height: 100%;
                 margin-left: -50px;
             }
+       }
+
+       &__player-info{
+       grid-area: profile-name;
+
+           &--overlap{
+                background-color:#8C9483;
+                text-align:right;
+                margin-bottom: 0.5rem;
+                padding-right: 0.2rem;
+           }
+       }
+
+       &__stats{
+       grid-area: profile-stats;
+        table{width: 100%;}
        }
 
     }
