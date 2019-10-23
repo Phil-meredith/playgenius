@@ -1,9 +1,6 @@
 import app.Routes
 import app.MatchStatsGenerator
-import clients.PersonalStatsClient
-import clients.TeamStatsClient
-import clients.FileReadingsClient
-import clients.MatchClient
+import clients.*
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
 import org.http4k.core.Method
@@ -14,8 +11,9 @@ import org.http4k.format.Jackson.asJsonObject
 
 class RoutesTest {
     private val readingsClient = FileReadingsClient({ name -> this.javaClass.getResourceAsStream("$name.csv") }, { null })
+    val personalStatsClient = PersonalStatsClient()
     private val route = Routes(
-        MatchStatsGenerator(readingsClient), MatchClient(), PersonalStatsClient(), TeamStatsClient()
+        MatchStatsGenerator(readingsClient), MatchClient(), personalStatsClient, TeamStatsClient(), UserDataClient(personalStatsClient)
     )
 
     @Test
