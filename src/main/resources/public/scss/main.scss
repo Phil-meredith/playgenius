@@ -125,6 +125,33 @@ header {
   }
 }
 
+.profile{
+    width:50%;
+    margin-left: 30%;
+    margin-top: 3%;
+
+    .stats-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+       &__circular{
+            display: inline-block;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+
+            img{
+                width: auto;
+                height: 100%;
+                margin-left: -50px;
+            }
+       }
+
+    }
+}
+
 .match {
     margin-top: 3rem;
     margin-left: 5rem;

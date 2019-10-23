@@ -1,9 +1,6 @@
 package app
 
-import clients.FileReadingsClient
-import clients.MatchClient
-import clients.PersonalStatsClient
-import clients.TeamStatsClient
+import clients.*
 import org.http4k.core.*
 import org.http4k.server.Jetty
 import org.http4k.server.asServer
@@ -24,5 +21,6 @@ fun main(args: Array<String>) {
             { name -> try{Routes::class.java.getResourceAsStream("/public/readings/$name/team.csv") } catch (e: IllegalStateException){null}})
     val statsController = MatchStatsGenerator(readingsClient)
 
-    audit.then(Routes(statsController, MatchClient(), PersonalStatsClient(), TeamStatsClient()).routes).asServer(Jetty(port)).start()
+    val personalStatsClient = PersonalStatsClient()
+    audit.then(Routes(statsController, MatchClient(), personalStatsClient, TeamStatsClient(), UserDataClient(personalStatsClient)).routes).asServer(Jetty(port)).start()
 }

@@ -38,13 +38,18 @@ fun DIV.loggedInNavBar() {
     nav("container__nav") {
         ul("container__nav__list") {
             li {
-                a(href = "/hello?name=Bob") {
+                a(href = "/matches") {
                     h1("container--noPad") { +"Home" }
                 }
             }
             li("container__nav--optional") {
-                a(href = "/") {
+                a(href = "/Profile/userId") {
                     h1("container--noPad") { +"Your Profile" }
+                }
+            }
+            li("container__nav--optional") {
+                a(href = "/") {
+                    h1("container--noPad") { +"About Us" }
                 }
             }
         }

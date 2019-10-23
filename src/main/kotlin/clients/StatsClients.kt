@@ -1,6 +1,7 @@
 package clients
 
 import model.*
+import java.time.Year
 
 class PersonalStatsClient{
     fun personalStats(userId: UserId) = PersonalStats(
@@ -20,7 +21,10 @@ class PersonalStatsClient{
         )
     )
 
+    fun individualMatchStats(userId: UserId):  List<ProfileStat> = listOf(ProfileStat("2019","Dons", 4,2,0,12))
 }
+
+data class ProfileStat(val season: String, val teamName: String, val wins: Int, val loses: Int, val draw: Int, val goalsScored: Int )
 
 class TeamStatsClient{
     fun teamStats(teamId: TeamId) = TeamStats(
@@ -34,4 +38,15 @@ class TeamStatsClient{
             Stats("Most games played", "Matt")
         )
     )
+}
+
+class UserDataClient(private val statsClient: PersonalStatsClient){
+    fun userDataFor(userId: UserId) = UserData(
+        "Sam",
+        "Owen",
+        "Western",
+        "Midfield",
+        null,
+        statsClient.individualMatchStats(userId)
+        )
 }

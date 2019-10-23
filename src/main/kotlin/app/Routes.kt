@@ -3,8 +3,10 @@ package app
 import clients.MatchClient
 import clients.PersonalStatsClient
 import clients.TeamStatsClient
+import clients.UserDataClient
 import htmlTemplates.MatchTemplate
 import htmlTemplates.MatchesTemplate
+import htmlTemplates.ProfileTemplate
 import htmlTemplates.SimpleMatchTemplate
 import model.*
 import org.http4k.contract.bindContract
@@ -21,14 +23,17 @@ import java.nio.ByteBuffer
 class Routes(private val statsGenerator: MatchStatsGenerator,
              private val matchClient: MatchClient,
              private val personalStatsClient: PersonalStatsClient,
-             private val teamStatsClient: TeamStatsClient
+             private val teamStatsClient: TeamStatsClient,
+             private val userDataClient: UserDataClient
 ) {
 
     private fun Path.matchId() = map { match -> MatchId(match) }
+    private fun Path.userId() = map { userId -> UserId(userId) }
 
     val routes = contract {
         routes.plusAssign(listOf(
             "/" bindContract GET to assetResponse("html", "index.html"),
+            "/Profile" / Path.userId().of("userId") bindContract GET to { userId -> ProfileTemplate(userDataClient.userDataFor(userId)).html.toOk() },
             "/match" / Path.matchId().of("match") bindContract GET to { match -> MatchTemplate(match).html.toOk() },
             "/simpleMatch" / Path.matchId().of("match")   bindContract GET to {match ->
                 SimpleMatchTemplate(

@@ -1,5 +1,6 @@
 package model
 
+import clients.ProfileStat
 import java.time.Instant
 
 abstract class MicroType {
@@ -21,3 +22,10 @@ data class Distance(val value: Double) {
         return Distance(value + p.value)
     }
 }
+
+data class UserData(val firstName: String,
+                    val surname: String,
+                    val nickname: String?,
+                    val position: String?,
+                    val imgUrl: String?,
+                    val matchStats:  List<ProfileStat>)
