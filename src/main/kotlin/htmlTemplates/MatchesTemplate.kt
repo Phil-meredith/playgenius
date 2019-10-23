@@ -24,10 +24,10 @@ class MatchesTemplate(
         body {
             splashHeader { loggedInNavBar() }
             div ("matches"){
-                listSection("Your Matches", "results") { yourMatches(matches)(this) }
+                listSection("Your Matches", "results") { yourMatchesCard(matches,"boot-small.png")(this) }
 
                     statsSection(
-                        "Your Seasons Stats", "matches__stats__personal", listOf(
+                        "Your Seasons Stats", "matches__stats__personal","matches__stats__personal__details", listOf(
                             allYourStatsCard("Best", stats.bestStats, "trophy-small.png"),
                             allYourStatsCard("Average", stats.average, "flatline-small.png"),
                             allYourStatsCard("Cumulative", stats.cumulative, "chart-small.png")

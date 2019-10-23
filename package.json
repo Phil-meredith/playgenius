@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass src/main/resources/public/scss  -o src/main/resources/public/css",
-    "sass:watch": "npm run sass && node-sass src/main/resources/public/scss -wo src/main/resources/public/cssx"
+    "sass:watch": "npm run sass && node-sass src/main/resources/public/scss -wo src/main/resources/public/css"
   },
   "repository": {
     "type": "git",

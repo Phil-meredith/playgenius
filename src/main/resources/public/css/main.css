@@ -1,7 +1,8 @@
 body {
   display: flex;
   flex-flow: column;
-  height: 100%; }
+  height: 100%;
+  background-color: cadetblue; }
 
 body {
   margin: 0 0 0 0;
@@ -134,16 +135,31 @@ header {
     list-style: none;
     padding-left: 0; }
   .matches .stats-block {
+    background-color: white;
     display: grid;
     grid-template-columns: 30% 1fr; }
+    .matches .stats-block--shadow {
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12); }
+  .matches .matches-block {
+    background-color: white;
+    width: 28%;
+    padding-left: 1rem;
+    display: grid;
+    grid-template-columns: 31% 1fr; }
+    .matches .matches-block li {
+      margin-bottom: 0.2rem; }
+    .matches .matches-block--shadow {
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12); }
   .matches__stats {
     display: grid;
     grid-template-columns: 1fr; }
     .matches__stats__personal {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 1rem;
-      grid-column-gap: 8rem; }
+      margin-right: 2rem; }
+      .matches__stats__personal__details {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 1rem;
+        grid-column-gap: 6rem; }
 
 .match {
   margin-top: 3rem;
