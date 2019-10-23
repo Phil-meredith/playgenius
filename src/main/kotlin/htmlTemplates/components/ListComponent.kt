@@ -31,13 +31,16 @@ fun yourMatches(matches: Matches): DIV.() -> Unit = {
     }
 }
 
-fun allYourStats(heading: String, stats: List<Stats>): DIV.() -> Unit = {
+fun allYourStatsCard(heading: String, stats: List<Stats>, cardImage: String? = null): DIV.() -> Unit = {
     div("stats-block") {
-        h3 { +heading }
-        table {
-            thead { tr { stats.map { it.key }.forEach { th { +it } } } }
-            tbody { tr { stats.map { it.value }.forEach { td { +it } } } }
-        }
+        cardImage?.apply { div("stats-block__image"){img (src = "/image/$cardImage"){}} }
+       div {
+           h3 { +heading }
+           table {
+               thead { tr { stats.map { it.key }.forEach { th { +it } } } }
+               tbody { tr { stats.map { it.value }.forEach { td { +it } } } }
+           }
+       }
     }
 }
 

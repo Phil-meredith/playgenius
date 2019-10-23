@@ -194,6 +194,10 @@ header {
         padding-left:0;
     }
 
+    .stats-block{
+        display: grid;
+        grid-template-columns: 30% 1fr;
+    }
 
     display: grid;
     grid-column-gap: 50px;
@@ -207,6 +211,7 @@ header {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             margin-top: 1rem;
+            grid-column-gap: 8rem;
         }
     }
 }

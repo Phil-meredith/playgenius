@@ -28,9 +28,9 @@ class MatchesTemplate(
 
                     statsSection(
                         "Your Seasons Stats", "matches__stats__personal", listOf(
-                            allYourStats("Best", stats.bestStats),
-                            allYourStats("Average", stats.average),
-                            allYourStats("Cumulative", stats.cumulative)
+                            allYourStatsCard("Best", stats.bestStats, "trophy-small.png"),
+                            allYourStatsCard("Average", stats.average, "flatline-small.png"),
+                            allYourStatsCard("Cumulative", stats.cumulative, "chart-small.png")
                         )
                     )
                     listSection("Team Stats", "matches__stats__team") { teamStats(teamStats)(this) }

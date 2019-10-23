@@ -131,13 +131,17 @@ header {
   .matches ul {
     list-style: none;
     padding-left: 0; }
+  .matches .stats-block {
+    display: grid;
+    grid-template-columns: 30% 1fr; }
   .matches__stats {
     display: grid;
     grid-template-columns: 1fr; }
     .matches__stats__personal {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      margin-top: 1rem; }
+      margin-top: 1rem;
+      grid-column-gap: 8rem; }
 
 .match {
   margin-top: 3rem;
