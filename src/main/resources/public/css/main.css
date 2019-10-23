@@ -135,7 +135,7 @@ header {
     list-style: none;
     padding-left: 0; }
   .matches .block {
-    background-color: white;
+    background-color: #F0E1BA;
     padding-left: 1rem;
     display: grid;
     grid-template-columns: 31% 1fr; }
