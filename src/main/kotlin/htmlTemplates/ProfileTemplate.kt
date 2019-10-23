@@ -25,9 +25,9 @@ class ProfileTemplate(private val userData: UserData) {
                 div("stats-card") {
                     div("stats-card__circular stats-card--top") {img(src="/image/${userData.imgUrl ?: "billy_hughes.jpg"}")  }
                     div("stats-card__player-info stats-card--top"){
-                        userData.nickname?.apply { div("stats-card__player-info--overlap"){h1{ + userData.nickname}} }
-                        div("stats-card__player-info--overlap"){h1 { + "${userData.firstName} ${userData.surname}"  }}
-                        div("stats-card__player-info--overlap"){h3 { + "${userData.position}"  }}
+                        userData.nickname?.apply { div("stats-card__player-info--overlap stats-card__player-info--headline"){h1{ + userData.nickname}} }
+                        div("stats-card__player-info--overlap stats-card__player-info--subdued"){h1 { + "${userData.firstName} ${userData.surname}"  }}
+                        div("stats-card__player-info--overlap stats-card__player-info--subdued"){h3 { + "${userData.position}"  }}
                     }
                     div("stats-card__stats"){
                         table {

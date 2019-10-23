@@ -85,7 +85,7 @@ header {
   margin-left: 30%;
   margin-top: 3%; }
   .profile .stats-card {
-    background-color: #F0ECEB;
+    background-color: #F0E1BA;
     width: 21rem;
     display: grid;
     grid-template-columns: 29% 69%;
@@ -113,6 +113,10 @@ header {
         text-align: right;
         margin-bottom: 0.5rem;
         padding-right: 0.2rem; }
+      .profile .stats-card__player-info--subdued {
+        background-color: #C5CBE3; }
+      .profile .stats-card__player-info--headline {
+        background-color: #F13C20; }
     .profile .stats-card__stats {
       grid-area: profile-stats; }
       .profile .stats-card__stats table {

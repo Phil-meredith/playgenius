@@ -131,7 +131,7 @@ header {
     margin-top: 3%;
 
     .stats-card{
-        background-color: #F0ECEB;
+        background-color: #F0E1BA;
         width: 21rem;
         display: grid;
         grid-template-columns: 29% 69%;
@@ -167,6 +167,14 @@ header {
                 text-align:right;
                 margin-bottom: 0.5rem;
                 padding-right: 0.2rem;
+           }
+
+           &--subdued{
+                background-color: #C5CBE3;
+           }
+
+           &--headline{
+                background-color: #F13C20;
            }
        }
 
