@@ -22,7 +22,7 @@ class ProfileTemplate(private val userData: UserData) {
         body {
             splashHeader{loggedInNavBar()}
             article("profile") {
-                div("stats-card") {
+                div("stats-card stats-card--shadow") {
                     div("stats-card__circular stats-card--top") {img(src="/image/${userData.imgUrl ?: "billy_hughes.jpg"}")  }
                     div("stats-card__player-info stats-card--top"){
                         userData.nickname?.apply { div("stats-card__player-info--overlap stats-card__player-info--headline"){h1{ + userData.nickname}} }
