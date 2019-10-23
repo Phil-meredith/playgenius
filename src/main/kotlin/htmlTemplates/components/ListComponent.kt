@@ -22,8 +22,8 @@ fun DIV.statsSection(heading: String, containerCss: String, css: String, stuff: 
 }
 
 fun yourMatchesCard(matches: Matches, cardImage: String): DIV.() -> Unit = {
-    div("matches-block matches-block--shadow") {
-        div("matches-block__image") { img(src = "/image/$cardImage") {} }
+    div("block block--small block--shadow") {
+        div("block__image") { img(src = "/image/$cardImage") {} }
         ul {
             matches.value.forEach {
                 this.li {
@@ -36,8 +36,8 @@ fun yourMatchesCard(matches: Matches, cardImage: String): DIV.() -> Unit = {
     }
 
 fun allYourStatsCard(heading: String, stats: List<Stats>, cardImage: String? = null): DIV.() -> Unit = {
-    div("stats-block stats-block--shadow") {
-        cardImage?.apply { div("stats-block__image"){img (src = "/image/$cardImage"){}} }
+    div("block block--shadow") {
+        cardImage?.apply { div("block__image"){img (src = "/image/$cardImage"){}} }
        div {
            h3 { +heading }
            table {
@@ -48,9 +48,11 @@ fun allYourStatsCard(heading: String, stats: List<Stats>, cardImage: String? = n
     }
 }
 
-fun teamStats(stats: TeamStats): DIV.() -> Unit = {
-    table {
-        thead { tr { stats.value.map { it.key }.forEach { th { +it } } } }
-        tbody { tr { stats.value.map { it.value }.forEach { td { +it } } } }
+fun teamStatsCard(stats: TeamStats, css: String): DIV.() -> Unit = {
+    div (css){
+        table {
+            thead { tr { stats.value.map { it.key }.forEach { th { +it } } } }
+            tbody { tr { stats.value.map { it.value }.forEach { td { +it } } } }
+        }
     }
 }

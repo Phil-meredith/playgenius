@@ -33,7 +33,7 @@ class MatchesTemplate(
                             allYourStatsCard("Cumulative", stats.cumulative, "chart-small.png")
                         )
                     )
-                    listSection("Team Stats", "matches__stats__team") { teamStats(teamStats)(this) }
+                    listSection("Team Stats", "matches__stats__team") { teamStatsCard(teamStats,"block block--medium")(this) }
 
             }
         }
