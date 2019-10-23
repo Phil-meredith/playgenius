@@ -37,9 +37,9 @@ class TeamStatsClient{
             Stats("Wins", "10"),
             Stats("Loses", "2"),
             Stats("Draws", "0"),
-            Stats("Fastest player", "Sam"),
-            Stats("Best goalscore", "Marcus"),
-            Stats("Most games played", "Matt")
+            Stats("Fastest Player", "Sam"),
+            Stats("Best Goal Scorer", "Marcus"),
+            Stats("Most Games Played", "Matt")
         )
     )
 }

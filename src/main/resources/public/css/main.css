@@ -122,6 +122,23 @@ header {
       .profile .stats-card__stats table {
         width: 100%; }
 
+.matches {
+  margin-top: 3rem;
+  margin-left: 5rem;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px; }
+  .matches ul {
+    list-style: none;
+    padding-left: 0; }
+  .matches__stats {
+    display: grid;
+    grid-template-columns: 1fr; }
+    .matches__stats__personal {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 1rem; }
+
 .match {
   margin-top: 3rem;
   margin-left: 5rem;

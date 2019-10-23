@@ -186,6 +186,31 @@ header {
     }
 }
 
+.matches{
+   margin-top: 3rem;
+    margin-left: 5rem;
+    ul {
+        list-style:none;
+        padding-left:0;
+    }
+
+
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+
+    &__stats{
+        display: grid;
+        grid-template-columns: 1fr;
+
+        &__personal{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 1rem;
+        }
+    }
+}
+
 .match {
     margin-top: 3rem;
     margin-left: 5rem;

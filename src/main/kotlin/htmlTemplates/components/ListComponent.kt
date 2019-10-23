@@ -5,45 +5,45 @@ import model.Matches
 import model.Stats
 import model.TeamStats
 
-fun DIV.listSection(heading: String, css: String, stuff: UL.() -> Unit): Unit {
+fun DIV.listSection(heading: String, css: String, stuff: DIV.() -> Unit): Unit {
     div(css) {
         h1 { +heading }
-        ul { stuff() }
+        div { stuff() }
     }
 }
 
-fun DIV.statsSection(heading: String, css: String, stuff: List<UL.() -> Unit>): Unit {
-    div(css) {
+fun DIV.statsSection(heading: String, css: String, stuff: List<DIV.() -> Unit>): Unit {
+    div {
         h1 { +heading }
-        stuff.forEach { ul { it() } }
-    }
-}
-
-fun yourMatches(matches: Matches): UL.() -> Unit = {
-    matches.value.forEach {
-        this.li {
-            this.a(href = "/simpleMatch/${it.value}") { +it.value.toString() }
+        div(css) {
+            stuff.forEach { it() }
         }
     }
 }
 
-fun allYourStats(heading: String, stats: List<Stats>): UL.() -> Unit = {
-    h3 { +heading }
-    stats.forEach { stat ->
-        this.li {
-            span { +stat.key }
-            span { +" : " }
-            span { +stat.value }
+fun yourMatches(matches: Matches): DIV.() -> Unit = {
+    ul {
+        matches.value.forEach {
+            this.li {
+                this.a(href = "/simpleMatch/${it.value}") { +it.value.toString() }
+            }
         }
     }
 }
 
-fun teamStats(stats: TeamStats): UL.() -> Unit = {
-    stats.value.forEach { stat ->
-        this.li {
-            span { +stat.key }
-            span { +" : " }
-            span { +stat.value }
+fun allYourStats(heading: String, stats: List<Stats>): DIV.() -> Unit = {
+    div("stats-block") {
+        h3 { +heading }
+        table {
+            thead { tr { stats.map { it.key }.forEach { th { +it } } } }
+            tbody { tr { stats.map { it.value }.forEach { td { +it } } } }
         }
+    }
+}
+
+fun teamStats(stats: TeamStats): DIV.() -> Unit = {
+    table {
+        thead { tr { stats.value.map { it.key }.forEach { th { +it } } } }
+        tbody { tr { stats.value.map { it.value }.forEach { td { +it } } } }
     }
 }

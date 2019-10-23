@@ -23,18 +23,17 @@ class MatchesTemplate(
         }
         body {
             splashHeader { loggedInNavBar() }
-            div ("match"){
-                listSection("Your Matches", "results") { yourMatches(matches)() }
-                div("stats") {
+            div ("matches"){
+                listSection("Your Matches", "results") { yourMatches(matches)(this) }
+
                     statsSection(
-                        "Your Stats", "result", listOf(
+                        "Your Seasons Stats", "matches__stats__personal", listOf(
                             allYourStats("Best", stats.bestStats),
                             allYourStats("Average", stats.average),
                             allYourStats("Cumulative", stats.cumulative)
                         )
                     )
-                    listSection("Team Stats", "result", { teamStats(teamStats)() })
-                }
+                    listSection("Team Stats", "matches__stats__team") { teamStats(teamStats)(this) }
 
             }
         }
