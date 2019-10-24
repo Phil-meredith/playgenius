@@ -125,6 +125,26 @@ header {
       .profile .stats-card__stats table {
         width: 100%; }
 
+.block {
+  background-color: #F0E1BA;
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: 0.4fr 1fr; }
+  .block--noimage {
+    grid-template-columns: 1fr; }
+  .block li {
+    margin-bottom: 0.2rem; }
+  .block__details {
+    text-align: left; }
+  .block--vertical-image {
+    width: 50%;
+    grid-template-columns: 1fr; }
+    @media (max-width: 994px) {
+      .block--vertical-image {
+        width: 100%; } }
+  .block--shadow {
+    /*box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);*/ }
+
 .matches {
   margin-top: 3rem;
   margin-left: 5rem;
@@ -141,25 +161,6 @@ header {
   .matches ul {
     list-style: none;
     padding-left: 0; }
-  .matches .block {
-    background-color: #F0E1BA;
-    padding-left: 1rem;
-    display: grid;
-    grid-template-columns: 0.4fr 1fr; }
-    .matches .block--noimage {
-      grid-template-columns: 1fr; }
-    .matches .block li {
-      margin-bottom: 0.2rem; }
-    .matches .block__details {
-      text-align: left; }
-    .matches .block--vertical-image {
-      width: 50%;
-      grid-template-columns: 1fr; }
-      @media (max-width: 994px) {
-        .matches .block--vertical-image {
-          width: 100%; } }
-    .matches .block--shadow {
-      /*box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);*/ }
   .matches__stats {
     display: grid;
     grid-template-columns: 1fr; }
@@ -177,10 +178,7 @@ header {
 
 .match {
   margin-top: 3rem;
-  margin-left: 5rem;
-  display: grid;
-  grid-column-gap: 50px;
-  grid-row-gap: 50px; }
+  margin-left: 5rem; }
   .match ul {
     list-style: none;
     padding-left: 0; }
