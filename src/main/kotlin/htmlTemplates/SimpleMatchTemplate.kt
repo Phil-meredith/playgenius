@@ -73,15 +73,17 @@ class SimpleMatchTemplate(
                     }
                 }
             }
-            button {
-                attributes.put( "id","draw-game-canvas")
-                +"play game"
-            }
-            div("replay"){
-                canvas {
-                    attributes.put( "id","game-canvas")
-                    attributes.put( "width","600")
-                    attributes.put( "height","600")
+            div("match-container") {
+                button {
+                    attributes.put("id", "draw-game-canvas")
+                    +"play game"
+                }
+                div("replay") {
+                    canvas {
+                        attributes.put("id", "game-canvas")
+                        attributes.put("width", "600")
+                        attributes.put("height", "600")
+                    }
                 }
             }
         }

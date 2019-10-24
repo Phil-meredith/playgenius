@@ -273,7 +273,18 @@ header {
     }
 }
 
-.match {
+.match-container{
+    margin-top: 2rem;
+    button{
+    width:100%;
+    }
+}
+
+.replay{
+    background-color: darkseagreen;
+}
+
+.match{
     margin-top: 3rem;
     margin-left: 5rem;
     ul {

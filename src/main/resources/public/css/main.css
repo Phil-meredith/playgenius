@@ -176,6 +176,14 @@ header {
         grid-column-gap: 1rem;
         grid-row-gap: 1rem; }
 
+.match-container {
+  margin-top: 2rem; }
+  .match-container button {
+    width: 100%; }
+
+.replay {
+  background-color: darkseagreen; }
+
 .match {
   margin-top: 3rem;
   margin-left: 5rem; }
