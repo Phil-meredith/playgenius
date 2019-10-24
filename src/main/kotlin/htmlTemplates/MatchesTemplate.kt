@@ -24,16 +24,16 @@ class MatchesTemplate(
         body {
             splashHeader { loggedInNavBar() }
             div ("matches"){
-                listSection("Your Matches", "results") { yourMatchesCard(matches,"boot-small.png")(this) }
+                listSection("Your Matches", "results") { verticalListCard(matches,"boot-small.png")(this) }
 
                     statsSection(
-                        "Your Seasons Stats", "matches__stats__personal","matches__stats__personal__details", listOf(
-                            allYourStatsCard("Best", stats.bestStats, "trophy-small.png"),
-                            allYourStatsCard("Average", stats.average, "flatline-small.png"),
-                            allYourStatsCard("Cumulative", stats.cumulative, "chart-small.png")
+                        "Your Seasons Stats", "matches__stats__personal","matches__stats__personal__details matches--margin-top", listOf(
+                            horizontalImageCard("Best", stats.bestStats, "trophy-small.png"),
+                            horizontalImageCard("Average", stats.average, "flatline-small.png"),
+                            horizontalImageCard("Cumulative", stats.cumulative, "chart-small.png")
                         )
                     )
-                    listSection("Team Stats", "matches__stats__team") { teamStatsCard(teamStats,"block block--medium")(this) }
+                    listSection("Team Stats", "matches__stats__team") { noImageCard(teamStats,"block block--noimage matches--margin-top")(this) }
 
             }
         }

@@ -21,8 +21,8 @@ fun DIV.statsSection(heading: String, containerCss: String, css: String, stuff: 
     }
 }
 
-fun yourMatchesCard(matches: Matches, cardImage: String): DIV.() -> Unit = {
-    div("block block--small block--shadow") {
+fun verticalListCard(matches: Matches, cardImage: String): DIV.() -> Unit = {
+    div("block block--vertical-image block--shadow matches--margin-top") {
         div("block__image") { img(src = "/image/$cardImage") {} }
         ul {
             matches.value.forEach {
@@ -35,10 +35,10 @@ fun yourMatchesCard(matches: Matches, cardImage: String): DIV.() -> Unit = {
     }
     }
 
-fun allYourStatsCard(heading: String, stats: List<Stats>, cardImage: String? = null): DIV.() -> Unit = {
+fun horizontalImageCard(heading: String, stats: List<Stats>, cardImage: String? = null): DIV.() -> Unit = {
     div("block block--shadow") {
         cardImage?.apply { div("block__image"){img (src = "/image/$cardImage"){}} }
-       div {
+       div("block__details") {
            h3 { +heading }
            table {
                thead { tr { stats.map { it.key }.forEach { th { +it } } } }
@@ -48,7 +48,7 @@ fun allYourStatsCard(heading: String, stats: List<Stats>, cardImage: String? = n
     }
 }
 
-fun teamStatsCard(stats: TeamStats, css: String): DIV.() -> Unit = {
+fun noImageCard(stats: TeamStats, css: String): DIV.() -> Unit = {
     div (css){
         table {
             thead { tr { stats.value.map { it.key }.forEach { th { +it } } } }
