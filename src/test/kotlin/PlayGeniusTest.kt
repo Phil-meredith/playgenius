@@ -1,4 +1,4 @@
-import app.Routes
+import app.PlayGenius
 import app.MatchStatsGenerator
 import clients.*
 import com.natpryce.hamkrest.assertion.assertThat
@@ -9,10 +9,10 @@ import org.http4k.core.Request
 import org.http4k.format.Jackson.asJsonObject
 
 
-class RoutesTest {
+class PlayGeniusTest {
     private val readingsClient = FileReadingsClient({ name -> this.javaClass.getResourceAsStream("$name.csv") }, { null })
     val personalStatsClient = PersonalStatsClient()
-    private val route = Routes(
+    private val route = PlayGenius(
         MatchStatsGenerator(readingsClient), MatchClient(), personalStatsClient, TeamStatsClient(), UserDataClient(personalStatsClient)
     )
 

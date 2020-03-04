@@ -20,11 +20,11 @@ import org.http4k.lens.Path
 import org.http4k.lens.string
 import java.nio.ByteBuffer
 
-class Routes(private val statsGenerator: MatchStatsGenerator,
-             private val matchClient: MatchClient,
-             private val personalStatsClient: PersonalStatsClient,
-             private val teamStatsClient: TeamStatsClient,
-             private val userDataClient: UserDataClient
+class PlayGenius(private val statsGenerator: MatchStatsGenerator,
+                 private val matchClient: MatchClient,
+                 private val personalStatsClient: PersonalStatsClient,
+                 private val teamStatsClient: TeamStatsClient,
+                 private val userDataClient: UserDataClient
 ) {
 
     private fun Path.matchId() = map { match -> MatchId(match) }
