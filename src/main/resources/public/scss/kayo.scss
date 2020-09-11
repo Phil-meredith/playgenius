@@ -19,3 +19,13 @@
     margin-top:-10rem;
     background-color:#1398D5;
 }
+
+.nav{
+    color:black;
+    &__logo{
+        padding-top: 1rem;
+        img{
+            width: 10rem;
+        }
+    }
+}

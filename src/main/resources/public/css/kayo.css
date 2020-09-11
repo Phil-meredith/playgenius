@@ -14,3 +14,10 @@
 .about-kayo {
   margin-top: -10rem;
   background-color: #1398D5; }
+
+.nav {
+  color: black; }
+  .nav__logo {
+    padding-top: 1rem; }
+    .nav__logo img {
+      width: 10rem; }
