@@ -1,3 +1,10 @@
+body {
+  width: 100%;
+  background-image: url("/image/hero-white.png");
+  background-color: #cccccc;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 .nav {
   height: 10rem; }
 
