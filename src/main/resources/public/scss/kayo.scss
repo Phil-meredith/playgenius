@@ -7,10 +7,6 @@ body{
 
  }
 
-.nav{
-    height:10rem;
-}
-
 .ml-7{
     margin-left:7rem;
 }
@@ -28,8 +24,11 @@ body{
     margin-top:-10rem;
     background-color:#1398D5;
 }
-
+.pre-register{
+    width:66%;
+}
 .nav{
+  height:10rem;
     color:black;
     &__logo{
         padding-top: 1rem;
