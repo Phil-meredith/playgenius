@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8e42e64f-518b-4ab7-aa23-19cd401e9850" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/image/koWhiteLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/image/screenDemo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/scss/ko.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/app/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/app/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/app/KayoRoutes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/app/KayoRoutes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/html/ko.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/html/ko.html" afterDir="false" />
     </list>
-    <list id="7036611a-69fe-4620-8f6d-9c66c0596fa1" name="DNC" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list id="7036611a-69fe-4620-8f6d-9c66c0596fa1" name="DNC" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,9 +56,6 @@
       </state>
     </system>
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="playgenius" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -65,272 +70,28 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/.idea/workspace.xml">
-      <ranges>
-        <range start1="3" end1="6" start2="3" end2="4" changelist="8e42e64f-518b-4ab7-aa23-19cd401e9850" />
-        <range start1="7" end1="8" start2="5" end2="5" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="10" end1="13" start2="7" end2="7" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="18" end1="18" start2="12" end2="15" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="25" end1="26" start2="22" end2="22" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="54" end1="160" start2="50" end2="50" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="170" end1="203" start2="60" end2="60" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="208" end1="399" start2="65" end2="67" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="400" end1="400" start2="68" end2="69" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="411" end1="412" start2="80" end2="81" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="419" end1="420" start2="88" end2="89" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="422" end1="423" start2="91" end2="93" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="425" end1="426" start2="95" end2="99" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="427" end1="428" start2="100" end2="100" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="430" end1="430" start2="102" end2="103" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="432" end1="435" start2="105" end2="105" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="436" end1="436" start2="106" end2="108" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="438" end1="439" start2="110" end2="110" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="440" end1="441" start2="111" end2="115" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="456" end1="457" start2="130" end2="131" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="461" end1="462" start2="135" end2="136" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="476" end1="477" start2="150" end2="151" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="481" end1="482" start2="155" end2="156" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="496" end1="497" start2="170" end2="171" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="501" end1="502" start2="175" end2="176" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="516" end1="517" start2="190" end2="191" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="521" end1="522" start2="195" end2="196" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="550" end1="554" start2="224" end2="228" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="559" end1="563" start2="233" end2="237" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="582" end1="729" start2="256" end2="256" changelist="8e42e64f-518b-4ab7-aa23-19cd401e9850" />
-        <range start1="848" end1="849" start2="375" end2="600" changelist="8e42e64f-518b-4ab7-aa23-19cd401e9850" />
-        <range start1="852" end1="854" start2="603" end2="605" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="855" end1="857" start2="606" end2="608" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="858" end1="860" start2="609" end2="611" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="861" end1="863" start2="612" end2="614" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="864" end1="866" start2="615" end2="617" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="867" end1="869" start2="618" end2="620" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="870" end1="872" start2="621" end2="623" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="873" end1="875" start2="624" end2="626" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="876" end1="878" start2="627" end2="629" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="879" end1="881" start2="630" end2="632" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="895" end1="931" start2="646" end2="646" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="934" end1="934" start2="649" end2="672" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="943" end1="966" start2="681" end2="692" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="967" end1="969" start2="693" end2="707" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="971" end1="981" start2="709" end2="714" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="985" end1="986" start2="718" end2="728" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="990" end1="991" start2="732" end2="733" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="995" end1="996" start2="737" end2="740" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="1000" end1="1001" start2="744" end2="745" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="1005" end1="1006" start2="749" end2="750" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="1010" end1="1011" start2="754" end2="755" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="1015" end1="1016" start2="759" end2="760" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="1020" end1="1021" start2="764" end2="765" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="1025" end1="1026" start2="769" end2="771" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-        <range start1="1030" end1="1373" start2="775" end2="775" changelist="7036611a-69fe-4620-8f6d-9c66c0596fa1" />
-      </ranges>
-    </file>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/App.kt" />
-        <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/public/html/index.html" />
-        <option value="$PROJECT_DIR$/assets/index.html" />
-        <option value="$PROJECT_DIR$/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/js/app.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/readings/250319.csv" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/readings/150319/readings.csv" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/readings/150319/team.txt" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/scss/_include_media.scss" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/scss/main.scss" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/app/StatsManTest.java" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/clients/ReadingsClient.kt" />
-        <option value="$PROJECT_DIR$/src/test/resources/testReadings.csv" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/HelloTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/app/StatsMan.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/app/StatsManTest.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ReadingsParserTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/clients/NotQuiteAHttpReadingsClient.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/clients/FileReadingsClient.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/app/StatsGeneratorTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/app/StatsGenerator.kt" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/html/matches.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/hbs/matches.hbs" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/htmlTemplates/Header.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Matches.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/htmlTemplates/Matches.kt" />
-        <option value="$PROJECT_DIR$/src/main/resources/hbs/app/Matches.hbs" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/htmlTemplates/HeaderTemplates.kt" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/app/App.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/RoutesTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/htmlTemplates/MatcheTemplate.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/app/Routes.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/clients/MatchClient.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/htmlTemplates/MatchesTemplate.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/htmlTemplates/MatchTemplate.kt" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/js/main.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/html/index.html" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1492" />
-    <option name="height" value="936" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="htmlTemplates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="readings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="readings" type="462c0819:PsiDirectoryNode" />
-              <item name="150319" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="readings" type="462c0819:PsiDirectoryNode" />
-              <item name="250319" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="playgenius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="playgenius" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectId" id="1VFfjIHJkl1RO4W4rBcArubyZuf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/public/scss" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -338,49 +99,45 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="clients" />
+      <recent name="app" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="app" />
     </key>
-    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="app" />
-      <recent name="clients" />
-    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="app" />
       <recent name="htmlTemplates" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/public/scss" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public/html" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public/image" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public/bootstrap" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/htmlTemplates/components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/public/image" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public/svg" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/htmlTemplates/components" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/htmlTemplates" />
       <recent name="$PROJECT_DIR$/src/main/resources/hbs/app" />
-      <recent name="$PROJECT_DIR$/src/main/resources/public/image" />
-      <recent name="$PROJECT_DIR$/src/main/resources/public/readings/250319" />
-      <recent name="$PROJECT_DIR$/src/main/resources/public/readings/150319" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Kotlin.app.AppKt">
-    <configuration name="RoutesTest.averagePositionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MaximumSpeedTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;RoutesTest.averagePositionTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;app.MaximumSpeedTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -395,12 +152,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RoutesTest.totalDistanceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MaximumSpeedTest.can calculate maximum speed per second with multiple readings per second" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;RoutesTest.totalDistanceTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;app.MaximumSpeedTest.can calculate maximum speed per second with multiple readings per second&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -415,12 +172,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StatsGeneratorTest.can get total difference" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MaximumSpeedTest.can calculate maximum speed per second" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;app.StatsGeneratorTest.can get total difference&quot;" />
+        <option name="scriptParameters" value="--tests &quot;app.MaximumSpeedTest.can calculate maximum speed per second&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -435,12 +192,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'playgenius_test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MaximumSpeedTest.missing seconds what happens?" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests *" />
+        <option name="scriptParameters" value="--tests &quot;app.MaximumSpeedTest.missing seconds what happens?&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -455,36 +212,37 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="app.AppKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="playgenius_main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
+    <configuration name="app.AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="playgenius.main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="app.AppKt" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.StatsGeneratorTest.can get total difference" />
-      <item itemvalue="Gradle.RoutesTest.totalDistanceTest" />
-      <item itemvalue="Gradle.RoutesTest.averagePositionTest" />
-      <item itemvalue="Gradle.Tests in 'playgenius_test'" />
+      <item itemvalue="Gradle.MaximumSpeedTest.can calculate maximum speed per second with multiple readings per second" />
+      <item itemvalue="Gradle.MaximumSpeedTest.missing seconds what happens?" />
+      <item itemvalue="Gradle.MaximumSpeedTest" />
+      <item itemvalue="Gradle.MaximumSpeedTest.can calculate maximum speed per second" />
       <item itemvalue="Kotlin.app.AppKt" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.app.AppKt" />
-        <item itemvalue="Gradle.Tests in 'playgenius_test'" />
-        <item itemvalue="Gradle.RoutesTest.totalDistanceTest" />
-        <item itemvalue="Gradle.RoutesTest.averagePositionTest" />
-        <item itemvalue="Gradle.StatsGeneratorTest.can get total difference" />
+        <item itemvalue="Gradle.MaximumSpeedTest.can calculate maximum speed per second" />
+        <item itemvalue="Gradle.MaximumSpeedTest" />
+        <item itemvalue="Gradle.MaximumSpeedTest.missing seconds what happens?" />
+        <item itemvalue="Gradle.MaximumSpeedTest.can calculate maximum speed per second with multiple readings per second" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -500,34 +258,8 @@
       <workItem from="1554040779610" duration="36562000" />
       <workItem from="1554293839602" duration="925000" />
       <workItem from="1554297855348" duration="15502000" />
-    </task>
-    <task id="LOCAL-00022" summary="remove text decoration">
-      <created>1554213460296</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1554213460296</updated>
-    </task>
-    <task id="LOCAL-00023" summary="splash page design">
-      <created>1554216389502</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1554216389502</updated>
-    </task>
-    <task id="LOCAL-00024" summary="get section to fill screen">
-      <created>1554218244635</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1554218244635</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Mobile friendly layout">
-      <created>1554219665994</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1554219665994</updated>
+      <workItem from="1587904823675" duration="72000" />
+      <workItem from="1587904948715" duration="5000" />
     </task>
     <task id="LOCAL-00026" summary="make things responsive">
       <created>1554220338586</created>
@@ -844,43 +576,68 @@
       <option name="project" value="LOCAL" />
       <updated>1583595337319</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="remove bootstrap">
+      <created>1583596436915</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1583596436915</updated>
+    </task>
+    <task id="LOCAL-00072" summary="basic kayo landing">
+      <created>1599861129107</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1599861129107</updated>
+    </task>
+    <task id="LOCAL-00073" summary="add white background">
+      <created>1599863206735</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1599863206735</updated>
+    </task>
+    <task id="LOCAL-00074" summary="some more ideas">
+      <created>1600430954076</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1600430954077</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StatsGeneratorTest_can_get_total_difference - 2019.05.06 at 17h 31m 12s.xml">
-      <configuration name="StatsGeneratorTest.can get total difference" configurationId="GradleRunConfiguration" />
+    <history-entry file="MaximumSpeedTest_missing_seconds_what_happens_ - 2019.07.21 at 17h 47m 33s.xml">
+      <configuration name="MaximumSpeedTest.missing seconds what happens?" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RoutesTest_totalDistanceTest - 2019.05.06 at 17h 32m 30s.xml">
-      <configuration name="RoutesTest.totalDistanceTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="MaximumSpeedTest_missing_seconds_what_happens_ - 2019.07.21 at 17h 48m 04s.xml">
+      <configuration name="MaximumSpeedTest.missing seconds what happens?" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RoutesTest_totalDistanceTest - 2019.05.06 at 17h 33m 11s.xml">
-      <configuration name="RoutesTest.totalDistanceTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="MaximumSpeedTest_missing_seconds_what_happens_ - 2019.07.21 at 17h 49m 06s.xml">
+      <configuration name="MaximumSpeedTest.missing seconds what happens?" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RoutesTest_averagePositionTest - 2019.05.06 at 17h 33m 41s.xml">
-      <configuration name="RoutesTest.averagePositionTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="MaximumSpeedTest_missing_seconds_what_happens_ - 2019.07.21 at 17h 49m 52s.xml">
+      <configuration name="MaximumSpeedTest.missing seconds what happens?" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RoutesTest_totalDistanceTest - 2019.05.06 at 17h 34m 09s.xml">
-      <configuration name="RoutesTest.totalDistanceTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="MaximumSpeedTest_missing_seconds_what_happens_ - 2019.07.21 at 18h 01m 17s.xml">
+      <configuration name="MaximumSpeedTest.missing seconds what happens?" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="Tests_in_'playgenius_test' - 2019.05.06 at 22h 44m 45s.xml">
-      <configuration name="Tests in 'playgenius_test'" configurationId="GradleRunConfiguration" />
+    <history-entry file="MaximumSpeedTest - 2019.07.21 at 18h 01m 29s.xml">
+      <configuration name="MaximumSpeedTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="Tests_in_'playgenius_test' - 2019.05.07 at 19h 46m 08s.xml">
-      <configuration name="Tests in 'playgenius_test'" configurationId="GradleRunConfiguration" />
+    <history-entry file="MaximumSpeedTest - 2019.07.21 at 18h 03m 02s.xml">
+      <configuration name="MaximumSpeedTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="Tests_in_'playgenius_test' - 2019.05.07 at 19h 46m 52s.xml">
-      <configuration name="Tests in 'playgenius_test'" configurationId="GradleRunConfiguration" />
+    <history-entry file="MaximumSpeedTest - 2019.07.21 at 18h 05m 20s.xml">
+      <configuration name="MaximumSpeedTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="Tests_in_'playgenius_test' - 2019.05.07 at 19h 46m 59s.xml">
-      <configuration name="Tests in 'playgenius_test'" configurationId="GradleRunConfiguration" />
+    <history-entry file="MaximumSpeedTest_can_calculate_maximum_speed_per_second - 2019.07.21 at 18h 06m 11s.xml">
+      <configuration name="MaximumSpeedTest.can calculate maximum speed per second" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="Tests_in_'playgenius_test' - 2019.05.07 at 20h 10m 20s.xml">
-      <configuration name="Tests in 'playgenius_test'" configurationId="GradleRunConfiguration" />
+    <history-entry file="MaximumSpeedTest_can_calculate_maximum_speed_per_second - 2019.07.21 at 18h 09m 05s.xml">
+      <configuration name="MaximumSpeedTest.can calculate maximum speed per second" configurationId="GradleRunConfiguration" />
     </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55066000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -891,44 +648,30 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="819" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20529328" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Palette&#9;" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295325" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295325" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990878" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295325" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295325" />
-      <window_info anchor="bottom" id="Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3287483" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" order="11" />
-      <window_info anchor="bottom" id="Build" order="12" weight="0.3295325" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Gradle" order="4" weight="0.32967034" />
-      <window_info anchor="right" id="Designer" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Maven" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -939,436 +682,142 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add index.html page" />
-    <MESSAGE value="link pages" />
-    <MESSAGE value="fix test break" />
-    <MESSAGE value="add scss build for heroku" />
-    <MESSAGE value="kick the build server" />
-    <MESSAGE value="promote node-sass to dependency for heroku" />
-    <MESSAGE value="add example data for testing" />
-    <MESSAGE value="Basic splash page &#10;&#10;proves out using sass and images" />
-    <MESSAGE value="add example of responsive nav bar" />
-    <MESSAGE value="remove text decoration" />
-    <MESSAGE value="splash page design" />
-    <MESSAGE value="get section to fill screen" />
-    <MESSAGE value="Mobile friendly layout" />
-    <MESSAGE value="make things responsive" />
-    <MESSAGE value="parse csv to readings" />
-    <MESSAGE value="move readings to prod code" />
-    <MESSAGE value="introduce average position" />
-    <MESSAGE value="get css from server" />
-    <MESSAGE value="drive by" />
-    <MESSAGE value="split by anchor as well" />
-    <MESSAGE value="add route for total Distance" />
-    <MESSAGE value="Refactor to use zip instead of reduce" />
-    <MESSAGE value="Use contract routes for better matching" />
+    <MESSAGE value="add a simple stats page&#10;&#10;didnt like the charts looked a bit bad so a different design option" />
+    <MESSAGE value="split stuff into model package" />
+    <MESSAGE value="add some placeholder stuff" />
+    <MESSAGE value="more skeleton work for front end" />
+    <MESSAGE value="skeleton for canvas" />
+    <MESSAGE value="draw some stuff on the canvas based on the points" />
+    <MESSAGE value="add some profile page example" />
     <MESSAGE value="fix build" />
-    <MESSAGE value="added some fake charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some fake charts" />
+    <MESSAGE value="css for profile page" />
+    <MESSAGE value="more css for profile page" />
+    <MESSAGE value="tidy up matches page css" />
+    <MESSAGE value="add img to stats card" />
+    <MESSAGE value="add shadow for profile card" />
+    <MESSAGE value="add cards to matches page" />
+    <MESSAGE value="pull out card css" />
+    <MESSAGE value="better background color" />
+    <MESSAGE value="css tidy up" />
+    <MESSAGE value="some responsive ness" />
+    <MESSAGE value="pull out bock css" />
+    <MESSAGE value="change color of game replay canvas" />
+    <MESSAGE value="initial kayo" />
+    <MESSAGE value="remove bootstrap" />
+    <MESSAGE value="basic kayo landing" />
+    <MESSAGE value="add white background" />
+    <MESSAGE value="some more ideas" />
+    <option name="LAST_COMMIT_MESSAGE" value="some more ideas" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="235" y="23" key="CommitChangelistDialog2" timestamp="1600430953781">
+      <screen x="0" y="23" width="1280" height="727" />
+    </state>
+    <state x="235" y="23" key="CommitChangelistDialog2/0.23.1280.727@0.23.1280.727" timestamp="1600430953781" />
+    <state width="1238" height="154" key="GridCell.Tab.0.bottom" timestamp="1603373821465">
+      <screen x="0" y="23" width="1280" height="728" />
+    </state>
+    <state width="1238" height="156" key="GridCell.Tab.0.bottom/0.23.1280.727/-347.-1057.1920.1057@0.23.1280.727" timestamp="1600797934211" />
+    <state width="1238" height="156" key="GridCell.Tab.0.bottom/0.23.1280.727@0.23.1280.727" timestamp="1600440191967" />
+    <state width="1238" height="154" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1603373821465" />
+    <state width="1238" height="154" key="GridCell.Tab.0.center" timestamp="1603373821464">
+      <screen x="0" y="23" width="1280" height="728" />
+    </state>
+    <state width="1238" height="156" key="GridCell.Tab.0.center/0.23.1280.727/-347.-1057.1920.1057@0.23.1280.727" timestamp="1600797934210" />
+    <state width="1238" height="156" key="GridCell.Tab.0.center/0.23.1280.727@0.23.1280.727" timestamp="1600440191966" />
+    <state width="1238" height="154" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1603373821464" />
+    <state width="1238" height="154" key="GridCell.Tab.0.left" timestamp="1603373821463">
+      <screen x="0" y="23" width="1280" height="728" />
+    </state>
+    <state width="1238" height="156" key="GridCell.Tab.0.left/0.23.1280.727/-347.-1057.1920.1057@0.23.1280.727" timestamp="1600797934210" />
+    <state width="1238" height="156" key="GridCell.Tab.0.left/0.23.1280.727@0.23.1280.727" timestamp="1600440191965" />
+    <state width="1238" height="154" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1603373821463" />
+    <state width="1238" height="154" key="GridCell.Tab.0.right" timestamp="1603373821464">
+      <screen x="0" y="23" width="1280" height="728" />
+    </state>
+    <state width="1238" height="156" key="GridCell.Tab.0.right/0.23.1280.727/-347.-1057.1920.1057@0.23.1280.727" timestamp="1600797934211" />
+    <state width="1238" height="156" key="GridCell.Tab.0.right/0.23.1280.727@0.23.1280.727" timestamp="1600440191966" />
+    <state width="1238" height="154" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1603373821464" />
+    <state x="268" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599863438972">
+      <screen x="0" y="23" width="1280" height="727" />
+    </state>
+    <state x="268" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.727@0.23.1280.727" timestamp="1599863438972" />
+    <state x="341" y="141" width="598" height="490" key="find.popup" timestamp="1600432004220">
+      <screen x="0" y="23" width="1280" height="727" />
+    </state>
+    <state x="341" y="141" width="598" height="490" key="find.popup/0.23.1280.727@0.23.1280.727" timestamp="1600432004220" />
+    <state x="88" y="57" key="new project wizard" timestamp="1602934360566">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="88" y="57" key="new project wizard/0.23.1440.823@0.23.1440.823" timestamp="1602934360566" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/htmlTemplates/MatchTemplate.kt</url>
-          <line>2</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JetRunConfigurationType">
+        <watch expression="this" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>javaClass.name.replace('.', '/')</expression-string>
+        <expression-string>manipulateReadingsPerUser(matchId) {
+        zipWithNext { reading1, reading2 -&gt;
+            DistanceAtTime(
+                reading2.dateTime.truncatedTo(ChronoUnit.SECONDS),
+                distanceBetween(reading1.position, reading2.position).sanitise()
+            )
+        }
+            .groupBy { d -&gt; d.time }
+            .map { (time, distances) -&gt; distances.sumDuring(time.plusSeconds(1)) }
+    }</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>acc</expression-string>
+        <expression-string>actual.get(&quot;9A26&quot;)</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>reading</expression-string>
+        <expression-string>statsGenerator.maximumSpeed(match)
+                    .asJsonObject()
+                    .asPrettyJsonString()</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>&quot;/readings/$name/readings.csv&quot;</expression-string>
+        <expression-string>statsGenerator.maximumSpeed(match)</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>resourceLoader(fileName)</expression-string>
+        <expression-string>time.plusMillis(1000)</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>statsGenerator.averagePosition(it).asJsonObject().toString()</expression-string>
+        <expression-string>r.copy( time = r.time.truncatedTo(ChronoUnit.SECONDS))</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>statsGenerator.averagePosition(it).asJsonObject()</expression-string>
+        <expression-string>time.plusSeconds(1)</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>statsGenerator.averagePosition(it)</expression-string>
+        <expression-string>stats.maximumSpeed(MatchId(&quot;blah&quot;))</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>this.javaClass.getResourceAsStream(&quot;/public/$assetType/$fileName&quot;)</expression-string>
+        <expression-string>stats.maximumSpeed(MatchId(&quot;blah&quot;)), equalTo(mapOf( UserId(&quot;0&quot;) to listOf(
+            DistanceAtTime(Instant.parse(&quot;2019-10-20T1</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/3.103.0/e4d2a8dc8410e31c231127d84a6aa91e4763c211/http4k-core-3.103.0-sources.jar!/org/http4k/routing/routing.kt" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/3.103.0/e4d2a8dc8410e31c231127d84a6aa91e4763c211/http4k-core-3.103.0-sources.jar!/org/http4k/core/UriTemplate.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="53" column="3" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="8" column="110" selection-start-line="8" selection-start-column="110" selection-end-line="8" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/io/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="272" column="11" selection-start-line="272" selection-start-column="11" selection-end-line="272" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/224a3bcfa1c088dd5d7c4a3958a68427b44c65dc/kotlin-stdlib-common-1.3.21-sources.jar!/kotlin/collections/Sequences.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/text/SimpleDateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="420" column="29" selection-start-line="420" selection-start-column="13" selection-end-line="420" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/text/DateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="151" column="22" selection-start-line="151" selection-start-column="22" selection-end-line="151" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/4.5/d22177e7b17cbef5d03b825d1e0b9355d3ac0fe0/opencsv-4.5-sources.jar!/com/opencsv/CSVReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="513" column="30" selection-start-line="513" selection-start-column="30" selection-end-line="513" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2207" column="24" selection-start-line="2207" selection-start-column="24" selection-end-line="2207" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.daviddenton/databob.kotlin/1.9.0/780498abceedc93fb76ce34c8d6a6007ac3c7771/databob.kotlin-1.9.0-sources.jar!/io/github/databob/Databob.kt" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/time/Instant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="206" column="19" selection-start-line="206" selection-start-column="19" selection-end-line="206" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ReadingsParserTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/224a3bcfa1c088dd5d7c4a3958a68427b44c65dc/kotlin-stdlib-common-1.3.21-sources.jar!/kotlin/util/Standard.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/testReadings.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="28" selection-start-column="24" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state>
-          <caret line="303" column="50" selection-start-line="303" selection-start-column="50" selection-end-line="303" selection-end-column="50" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/app/StatsGeneratorTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/224a3bcfa1c088dd5d7c4a3958a68427b44c65dc/kotlin-stdlib-common-1.3.21-sources.jar!/generated/_Collections.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="2250" column="27" selection-start-line="2250" selection-start-column="27" selection-end-line="2250" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/224a3bcfa1c088dd5d7c4a3958a68427b44c65dc/kotlin-stdlib-common-1.3.21-sources.jar!/kotlin/collections/Maps.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="384" column="26" selection-start-line="384" selection-start-column="25" selection-end-line="384" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/html/matches.html" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/3.140.0/b7391de932e562c853c1952402a5af3db00c0ba/http4k-core-3.140.0-sources.jar!/org/http4k/template/Templates.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jknack/handlebars/4.1.2/51cbe0290a40fb58041dd100dfed93c099ac38b5/handlebars-4.1.2-sources.jar!/com/github/jknack/handlebars/Handlebars.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="418" column="25" selection-start-line="418" selection-start-column="25" selection-end-line="418" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-template-handlebars/3.140.0/9df62397c3ca7bc264857ce0516bb011520fc2ca/http4k-template-handlebars-3.140.0-sources.jar!/org/http4k/template/HandlebarsTemplates.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/htmlTemplates/Header.kt" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-html-jvm/0.6.12/9ef150098b9c266ef6dac2f1ef9cc1b645c49e2a/kotlinx-html-jvm-0.6.12-sources.jar!/generated/gen-tag-groups.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hbs/app/Matches.hbs" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/htmlTemplates/HeaderTemplates.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-html-jvm/0.6.12/9ef150098b9c266ef6dac2f1ef9cc1b645c49e2a/kotlinx-html-jvm-0.6.12-sources.jar!/generated/gen-tags-b.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-html-jvm/0.6.12/9ef150098b9c266ef6dac2f1ef9cc1b645c49e2a/kotlinx-html-jvm-0.6.12-sources.jar!/generated/gen-tags-h.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2505">
-          <caret line="169" column="26" selection-start-line="169" selection-start-column="26" selection-end-line="169" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-html-jvm/0.6.12/9ef150098b9c266ef6dac2f1ef9cc1b645c49e2a/kotlinx-html-jvm-0.6.12-sources.jar!/generated/gen-consumer-tags.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4380">
-          <caret line="294" column="36" selection-start-line="294" selection-start-column="30" selection-end-line="294" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="32" column="76" selection-start-line="32" selection-start-column="76" selection-end-line="32" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-contract/3.140.0/20783affda59112899c918cb0de7e1db41e25aeb/http4k-contract-3.140.0.jar!/org/http4k/contract/ContractRoute.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-contract/3.140.0/2f607c24cb5e57d74bcc1e8d043434f2f0d50470/http4k-contract-3.140.0-sources.jar!/org/http4k/contract/extensions.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-contract/3.140.0/2f607c24cb5e57d74bcc1e8d043434f2f0d50470/http4k-contract-3.140.0-sources.jar!/org/http4k/contract/ContractRoute.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/RoutesTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/app/App.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#13#227#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/3.140.0/b7391de932e562c853c1952402a5af3db00c0ba/http4k-core-3.140.0-sources.jar!/org/http4k/template/ViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.http4k/http4k-core/3.140.0/b7391de932e562c853c1952402a5af3db00c0ba/http4k-core-3.140.0-sources.jar!/org/http4k/lens/path.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/clients/MatchClient.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="65" lean-forward="true" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
-          <folding>
-            <element signature="e#17#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/htmlTemplates/MatchesTemplate.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/htmlTemplates/MatchTemplate.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding>
-            <element signature="e#23#99#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/readings/150319/team.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/readings/150319/readings.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="8055">
-          <caret line="537" column="52" selection-start-line="537" selection-start-column="52" selection-end-line="537" selection-end-column="52" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state>
-          <caret line="8881" selection-start-line="8881" selection-end-line="8881" selection-end-column="17" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/app/Routes.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/app/StatsGenerator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="54" lean-forward="true" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
-          <folding>
-            <element signature="e#13#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/clients/FileReadingsClient.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="34" column="118" selection-start-line="34" selection-start-column="118" selection-end-line="34" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

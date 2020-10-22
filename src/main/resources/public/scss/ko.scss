@@ -1,0 +1,90 @@
+body{
+ width:100%;
+ background: #101722;
+ font-family: 'PT Mono', sans-serif;
+ color: white;
+ margin:0px;
+ }
+
+.container{
+    text-align:left;
+
+    .tagline{
+        font-size: 50px;
+        letter-spacing: 12px;
+    }
+
+    .blurb{
+        font-size: 20px;
+        letter-spacing: 6px;
+    }
+
+
+    .demo{
+    position: absolute;
+    width: 423.88px;
+    height: 532px;
+    left: 854px;
+    top: 59px;
+        &__image{
+            height: 77%;
+        }
+    }
+
+     .text{
+    position: absolute;
+    width: 1008px;
+    left: 111px;
+    top: 350px;
+
+        .header{
+            margin-bottom:2rem;
+            }
+
+        .blurb{
+        margin-bottom:1.5rem;}
+    }
+
+    .cta{
+
+    .form-group{
+        width:25%;
+        display:inline-block;
+    }
+        .form-control{
+            background-color:transparent;
+            border: none;
+            width:240px;
+            height:2.3rem;
+            border-bottom: 1px solid rgba(195,195,195,.5);
+        }
+
+        .form-control:focus{
+           background-color: yellow;
+        }
+
+            .btn-primary{
+                    width: 133px;
+                    height: 47px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    display: inline-block;
+                    height: calc(7 * 6px + 3px);
+                    margin: 1px 0 2px;
+                    padding: 0 28px;
+                    text-align: center;
+                    white-space: nowrap;
+                    outline: 0;
+                    background: #51b1e7;
+                    border-radius: 2px;
+                    box-shadow: 0 14px 34px -10px rgba(0,0,0,.15), 0 14px 34px -10px rgba(0,0,0,.15);
+                    transition: .5s;
+
+                    &__text{
+                        line-height: 45px;
+                        }
+            }
+        }
+}

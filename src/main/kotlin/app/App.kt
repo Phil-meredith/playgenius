@@ -32,8 +32,8 @@ fun main(args: Array<String>) {
         UserDataClient(personalStatsClient)
     )
     val routes: HttpHandler = routes(
-        "/kayo" bind KayoRoutes().routes,
-        "/" bind playGeniusRoutes.routes
+        "/" bind KayoRoutes().routes
+        //,"/" bind playGeniusRoutes.routes
     )
     audit.then(
         routes)
