@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e42e64f-518b-4ab7-aa23-19cd401e9850" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/image/koWhiteLogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/image/screenDemo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/scss/ko.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/css/ko.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/app/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/app/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/app/KayoRoutes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/app/KayoRoutes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/html/ko.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/html/ko.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <list id="7036611a-69fe-4620-8f6d-9c66c0596fa1" name="DNC" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -260,13 +255,6 @@
       <workItem from="1554297855348" duration="15502000" />
       <workItem from="1587904823675" duration="72000" />
       <workItem from="1587904948715" duration="5000" />
-    </task>
-    <task id="LOCAL-00026" summary="make things responsive">
-      <created>1554220338586</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1554220338586</updated>
     </task>
     <task id="LOCAL-00027" summary="make things responsive">
       <created>1554220649762</created>
@@ -604,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600430954077</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="just the ko page">
+      <created>1603373889673</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1603373889673</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -682,7 +677,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add a simple stats page&#10;&#10;didnt like the charts looked a bit bad so a different design option" />
     <MESSAGE value="split stuff into model package" />
     <MESSAGE value="add some placeholder stuff" />
     <MESSAGE value="more skeleton work for front end" />
@@ -707,45 +701,56 @@
     <MESSAGE value="basic kayo landing" />
     <MESSAGE value="add white background" />
     <MESSAGE value="some more ideas" />
-    <option name="LAST_COMMIT_MESSAGE" value="some more ideas" />
+    <MESSAGE value="just the ko page" />
+    <option name="LAST_COMMIT_MESSAGE" value="just the ko page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="235" y="23" key="CommitChangelistDialog2" timestamp="1600430953781">
-      <screen x="0" y="23" width="1280" height="727" />
+    <state x="235" y="23" key="CommitChangelistDialog2" timestamp="1603373889303">
+      <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state x="235" y="23" key="CommitChangelistDialog2/0.23.1280.727@0.23.1280.727" timestamp="1600430953781" />
-    <state width="1238" height="154" key="GridCell.Tab.0.bottom" timestamp="1603373821465">
-      <screen x="0" y="23" width="1280" height="728" />
+    <state x="235" y="23" key="CommitChangelistDialog2/0.23.1280.728@0.23.1280.728" timestamp="1603373889303" />
+    <state width="1238" height="154" key="GridCell.Tab.0.bottom" timestamp="1603374719752">
+      <screen x="0" y="23" width="1280" height="729" />
     </state>
     <state width="1238" height="156" key="GridCell.Tab.0.bottom/0.23.1280.727/-347.-1057.1920.1057@0.23.1280.727" timestamp="1600797934211" />
     <state width="1238" height="156" key="GridCell.Tab.0.bottom/0.23.1280.727@0.23.1280.727" timestamp="1600440191967" />
     <state width="1238" height="154" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1603373821465" />
-    <state width="1238" height="154" key="GridCell.Tab.0.center" timestamp="1603373821464">
-      <screen x="0" y="23" width="1280" height="728" />
+    <state width="1238" height="154" key="GridCell.Tab.0.bottom/0.23.1280.729@0.23.1280.729" timestamp="1603374719752" />
+    <state width="1238" height="154" key="GridCell.Tab.0.center" timestamp="1603374719752">
+      <screen x="0" y="23" width="1280" height="729" />
     </state>
     <state width="1238" height="156" key="GridCell.Tab.0.center/0.23.1280.727/-347.-1057.1920.1057@0.23.1280.727" timestamp="1600797934210" />
     <state width="1238" height="156" key="GridCell.Tab.0.center/0.23.1280.727@0.23.1280.727" timestamp="1600440191966" />
     <state width="1238" height="154" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1603373821464" />
-    <state width="1238" height="154" key="GridCell.Tab.0.left" timestamp="1603373821463">
-      <screen x="0" y="23" width="1280" height="728" />
+    <state width="1238" height="154" key="GridCell.Tab.0.center/0.23.1280.729@0.23.1280.729" timestamp="1603374719752" />
+    <state width="1238" height="154" key="GridCell.Tab.0.left" timestamp="1603374719751">
+      <screen x="0" y="23" width="1280" height="729" />
     </state>
     <state width="1238" height="156" key="GridCell.Tab.0.left/0.23.1280.727/-347.-1057.1920.1057@0.23.1280.727" timestamp="1600797934210" />
     <state width="1238" height="156" key="GridCell.Tab.0.left/0.23.1280.727@0.23.1280.727" timestamp="1600440191965" />
     <state width="1238" height="154" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1603373821463" />
-    <state width="1238" height="154" key="GridCell.Tab.0.right" timestamp="1603373821464">
-      <screen x="0" y="23" width="1280" height="728" />
+    <state width="1238" height="154" key="GridCell.Tab.0.left/0.23.1280.729@0.23.1280.729" timestamp="1603374719751" />
+    <state width="1238" height="154" key="GridCell.Tab.0.right" timestamp="1603374719752">
+      <screen x="0" y="23" width="1280" height="729" />
     </state>
     <state width="1238" height="156" key="GridCell.Tab.0.right/0.23.1280.727/-347.-1057.1920.1057@0.23.1280.727" timestamp="1600797934211" />
     <state width="1238" height="156" key="GridCell.Tab.0.right/0.23.1280.727@0.23.1280.727" timestamp="1600440191966" />
     <state width="1238" height="154" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1603373821464" />
+    <state width="1238" height="154" key="GridCell.Tab.0.right/0.23.1280.729@0.23.1280.729" timestamp="1603374719752" />
+    <state x="240" y="127" key="Vcs.Push.Dialog.v2" timestamp="1603373894164">
+      <screen x="0" y="23" width="1280" height="728" />
+    </state>
+    <state x="240" y="127" key="Vcs.Push.Dialog.v2/0.23.1280.728@0.23.1280.728" timestamp="1603373894164" />
     <state x="268" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599863438972">
       <screen x="0" y="23" width="1280" height="727" />
     </state>
     <state x="268" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.727@0.23.1280.727" timestamp="1599863438972" />
-    <state x="341" y="141" width="598" height="490" key="find.popup" timestamp="1600432004220">
-      <screen x="0" y="23" width="1280" height="727" />
+    <state x="341" y="141" width="598" height="491" key="find.popup" timestamp="1603373846487">
+      <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state x="341" y="141" width="598" height="490" key="find.popup/0.23.1280.727@0.23.1280.727" timestamp="1600432004220" />
+    <state x="341" y="141" width="598" height="491" key="find.popup/0.23.1280.728@0.23.1280.728" timestamp="1603373846487" />
     <state x="88" y="57" key="new project wizard" timestamp="1602934360566">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
