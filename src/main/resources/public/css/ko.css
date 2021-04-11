@@ -90,6 +90,8 @@ body {
       border-bottom: 1px solid rgba(195, 195, 195, 0.5); }
     .container .cta .form-control:focus {
       background-color: yellow; }
+    .container .cta .btn-primary:hover, .container .cta .btn-primary:focus {
+      background: #2C403F; }
     .container .cta .btn-primary {
       width: 133px;
       height: 47px;
