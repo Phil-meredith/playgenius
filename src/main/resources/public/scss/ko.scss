@@ -9,44 +9,115 @@ body{
 .container{
     text-align:left;
 
-    .tagline{
-        font-size: 50px;
-        letter-spacing: 12px;
-    }
+       @media screen and (max-width: 479px) {
+        padding: 3rem;
+         margin: auto;
+        }
 
-    .blurb{
-        font-size: 20px;
-        letter-spacing: 6px;
-    }
 
 
     .demo{
-    position: absolute;
-    width: 423.88px;
-    height: 532px;
-    left: 854px;
-    top: 59px;
-        &__image{
-            height: 77%;
+     @media screen and (min-width: 480px) {
+           position: absolute;
+           width: 423.88px;
+           height: 532px;
+           left: 854px;
+           top: 59px;
+                &__image{
+                   height: 77%;
+               }
         }
+
+    @media screen and (min-width: 1800px)  {
+    left: 1050px;
     }
 
-     .text{
-    position: absolute;
-    width: 1008px;
-    left: 111px;
-    top: 350px;
+    @media screen and (max-width: 479px) {
+    display:none;
+    }
+    }
+
+    .text{
+        @media screen and (max-width: 479px) {
+           .tagline{
+                font-size: 25px;
+                letter-spacing: 9px;
+                margin-bottom: 1rem;
+            }
+
+            .blurb{
+                font-size: 16px;
+                letter-spacing: 6px;
+                }
+         }
+
+        @media screen and (min-width: 480px) {
+            position: absolute;
+            width: 1008px;
+            left: 111px;
+            top: 350px;
+            .tagline{
+                font-size: 50px;
+                letter-spacing: 12px;
+            }
+
+            .blurb{
+                font-size: 20px;
+                letter-spacing: 6px;
+                }
+            }
 
         .header{
             margin-bottom:2rem;
             }
 
         .blurb{
-        margin-bottom:1.5rem;}
-    }
+            margin-bottom:1.5rem;
+            }
+      }
 
     .cta{
 
+    @media screen and (max-width: 479px) {
+
+        .form-control{
+            background-color:transparent;
+            border: none;
+            height:2.3rem;
+            width:100%;
+            border-bottom: 1px solid rgba(195,195,195,.5);
+            margin-bottom:1rem;
+        }
+        .form-control:focus{
+            background-color: yellow;
+        }
+
+                    .btn-primary{
+
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                            display: inline-block;
+                            height: calc(7 * 6px + 3px);
+                            width:100%;
+                            margin: 1px 0 2px;
+                            text-align: center;
+                            white-space: nowrap;
+                            outline: 0;
+                            background: #51b1e7;
+                            border-radius: 2px;
+                            box-shadow: 0 14px 34px -10px rgba(0,0,0,.15), 0 14px 34px -10px rgba(0,0,0,.15);
+                            transition: .5s;
+
+                            &__text{
+                                line-height: 45px;
+                                }
+                    }
+
+    }
+
+      @media screen and (min-width: 480px) {
     .form-group{
         width:25%;
         display:inline-block;
@@ -86,5 +157,6 @@ body{
                         line-height: 45px;
                         }
             }
+        }
         }
 }

@@ -1,0 +1,50 @@
+<html>
+<head>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/ko2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    $(document).ready(function(){
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwhlt5q66aLcLblJ6ImFcRG7N61QIOcz_EdfR2D7vjpupS9XqYJ/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+  })
+
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="text">
+        <div class="Header"><img src="/image/koWhiteLogo.png"/></div>
+        <div class="tagline">Make Sports Social Again</div>
+        <div class="demo"><img src="/image/screenDemo.png" class="demo__image"/></div>
+        <div class="blurb">team Stats, player stats, more fun - coming soon.</div>
+        <div class="cta">
+            <form name="submit-to-google-sheet" class="pre-register">
+                <div class="form-group">
+                    <input class="form-control" id="inputEmail" name="email" type="email" placeholder="ENTER EMAIL"
+                           required>
+                </div>
+                <div type="submit" class="btn-primary"><span class="btn-primary__text">Get Invite</span></div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

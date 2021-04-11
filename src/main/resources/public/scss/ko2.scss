@@ -1,0 +1,14 @@
+body{
+ width:100%;
+ background: #101722;
+ font-family: 'PT Mono', sans-serif;
+ color: white;
+ margin:5px;
+ }
+
+
+ .demo{
+      &__image{
+                height: 77%;
+            }
+ }

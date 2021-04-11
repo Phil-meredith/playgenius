@@ -19,6 +19,7 @@ class KayoRoutes() {
         routes.plusAssign(listOf(
             //"/social-stats" bindContract GET to assetResponse("html", "kayo.html"),
             "/ko" bindContract GET to assetResponse("html", "ko.html"),
+            "/ko2" bindContract GET to assetResponse("html", "ko2.html"),
             Path.string().of("assetType") / Path.string().of("fileName") bindContract GET to { assetType, fileName ->
                 assetResponse(assetType, fileName)
             }
