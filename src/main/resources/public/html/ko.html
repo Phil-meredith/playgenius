@@ -14,8 +14,9 @@
     $(document).ready(function(){
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwhlt5q66aLcLblJ6ImFcRG7N61QIOcz_EdfR2D7vjpupS9XqYJ/exec'
   const form = document.forms['submit-to-google-sheet']
+  const button = document.getElementById('submit-email')
 
-  form.addEventListener('submit', e => {
+  button.addEventListener('click', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
@@ -36,7 +37,7 @@
         <div class="form-group">
             <input class="form-control" id="inputEmail" name="email" type="email" placeholder="ENTER EMAIL" required>
         </div>
-        <div type="submit" class="btn-primary"><span class="btn-primary__text">Get Invite</span></div>
+        <div class="btn-primary" id="submit-email"><span class="btn-primary__text">Get Invite</span></div>
     </form></div>
     </div>
 </div>
