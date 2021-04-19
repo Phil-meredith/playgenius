@@ -18,7 +18,7 @@
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
+      .then(response => console.log('Success!', response); window.location.assign('/thank-you');)
       .catch(error => console.error('Error!', error.message))
   })
   })
@@ -37,7 +37,7 @@
                <div class="form-group">
                     <input class="form-control" id="inputEmail" name="email" type="email" placeholder="ENTER EMAIL" required>
                 </div>
-            <button type="submit" class="btn-primary" ><span class="btn-primary__text">Get Invite</span></button>
+            <button type="submit" class="" ><span class="btn-primary__text">Get Invite</span></button>
             </form>
         </div>
     </div>
