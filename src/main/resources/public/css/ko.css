@@ -97,3 +97,41 @@ body {
     outline-offset: -4px; }
   .container .cta button:active {
     transform: scale(0.99); }
+
+.social-container {
+  text-align: left;
+  padding: 3rem; }
+  @media screen and (max-width: 479px) {
+    .social-container {
+      margin: auto; } }
+  @media screen and (max-width: 479px) {
+    .social-container .text .tagline {
+      font-size: 25px;
+      letter-spacing: 9px;
+      margin-bottom: 1rem; }
+    .social-container .text .blurb {
+      font-size: 16px;
+      letter-spacing: 6px; } }
+  @media screen and (min-width: 480px) {
+    .social-container .text {
+      position: absolute;
+      width: 1008px;
+      left: 111px; }
+      .social-container .text .tagline {
+        font-size: 50px;
+        letter-spacing: 12px; }
+      .social-container .text .blurb {
+        font-size: 20px;
+        letter-spacing: 6px; } }
+  .social-container .text .header {
+    margin-bottom: 2rem; }
+  .social-container .text .blurb {
+    margin-bottom: 1.5rem; }
+  .social-container .social-cta a {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center; }
+  .social-container .social-cta .social-text {
+    margin-left: 1rem;
+    padding-right: 1rem; }
